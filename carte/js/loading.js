@@ -5,5 +5,5 @@ window.onload = function () {
         setTimeout(function () {
             loading.remove();
         }
-        , 9000);
+        , 3000);
 }

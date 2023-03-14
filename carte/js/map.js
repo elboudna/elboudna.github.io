@@ -344,7 +344,7 @@ let markerEurofins = L.marker([45.56313548065247, -73.45899298824833], { icon: m
 let templateEurofins = `
     <div class="popup">
         <div>
-            <img src="img/logo/ABC/Eurofins-removebg-preview.png" alt="Eurofins" >
+            <img src="img/logo/ABC/Eurofins_Logo-removebg-preview.png" alt="Eurofins" >
         </div>
         <div class='popup-text'>
             <h3>Eurofins</h3>
@@ -358,7 +358,7 @@ let markerRoundup = L.marker([49.285889177594505, -123.11654623049542], { icon: 
 let templateRoundup = `
     <div class="popup">
         <div>
-            <img src="img/logo/ABC/Roundup-removebg-preview.png" alt="Roundup" >
+            <img src="img/logo/ABC/AME_Roundup_2023-removebg-preview.png" alt="Roundup" >
         </div>
         <div class='popup-text'>
             <h3>Roundup</h3>
@@ -372,7 +372,7 @@ let markerMicom = L.marker([45.451575269772604, -73.72897711534362], { icon: mar
 let templateMicom = `
     <div class="popup">
         <div>
-            <img src="img/logo/ABC/Micom-removebg-preview.png" alt="Micom" >
+            <img src="img/logo/ABC/Micom-logo-removebg-preview.png" alt="Micom" >
         </div>
         <div class='popup-text'>
             <h3>Micom</h3>
