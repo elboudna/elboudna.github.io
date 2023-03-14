@@ -1,0 +1,297 @@
+ .hero-text{
+    /* margin-left: 100px; */
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    /* gap: 300px; */
+  }
+
+  .hero-description{
+  }
+
+
+  #nonHero{
+    z-index: 1;
+    position: relative;
+    background-color: white;
+  }
+
+  .flexAPropos{
+    display: flex;
+    margin-bottom:150px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 100px;
+  }
+
+  .aProposImg{
+    background : url(/images/apropos.jpg) no-repeat center center/cover; ;
+    height: 80vh;
+    width: 100%;
+  }
+
+  .flexAnimation{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+    background-color: black;
+    gap: 10px;
+    text-transform: uppercase;
+  }
+
+  .ligne1, .ligne2{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+   
+    /* padding: 20px; */
+  }
+
+  .ligne1 div, .ligne2 div{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%; */
+    /* background-color: white; */
+    color: white;
+    
+  }
+
+  .flexDescription{
+    display: flex;
+    flex-direction: column;
+    /* box-sizing: content-box; */
+    background-color: rgb(255, 246, 247) ;
+  }
+
+ 
+
+  .flexDescription > div{
+    padding: 80px;
+  }
+
+  .descriptionTexte{
+    height: 100%;
+  }
+
+  
+
+
+  /* body {
+    overflow: hidden;
+    background: rgb(25,35,125);
+  } */
+  
+  .animationDrop{
+    /* margin-bottom: 250px; */
+  }
+
+  div.drop-container {
+    position: absolute;
+    margin-right: 500px;
+    /* top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; */
+    /* margin: auto; */
+    height: 200px;
+    width: 200px;
+  }
+  
+  .hero {
+    background: url(/images/carou.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: sticky;
+    z-index: 0;
+    top: 0;
+    display: flex;
+    /* gap: 300px; */
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  div.drop {
+    position: absolute;
+    top: -95%;
+    width: 100%;
+    height: 100%;
+    border-radius: 100% 5% 100% 100%;
+    transform: rotate(-45deg);
+    margin: 0px;
+    background: deepskyblue;
+    animation: drip 3s forwards;
+  }
+  
+  .hero h1 {
+    color: white;
+    position: absolute;
+    font-size: 2em;
+    height: 1em;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 2;
+    margin: auto;
+    text-align: center;
+    opacity: 0;
+    animation: appear 2s 2.5s forwards;
+  }
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  div.drop-container:before,
+  div.drop-container:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 55%;
+    right: 50%;
+    transform: translate(50%) rotateX(75deg);
+    border-radius: 100%;
+    opacity: 0;
+    width: 75%;
+    height: 75%;
+    border: 5px solid skyblue;
+    animation: dripple 2s infinite .7s;
+  }
+  
+  div.drop-container:after {
+    animation: dripple 3s infinite 1s;
+  }
+  
+  @keyframes drip {
+    45% {
+      top: 0;
+      border-radius: 100% 5% 100% 100%;
+      transform: rotate(-45deg);
+    }
+    100% {
+      top: 0;
+      transform: rotate(0deg);
+      border-radius: 100%;
+    }
+  }
+  
+  @keyframes dripple {
+    0% {
+      width: 150px;
+      height: 150px;
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+      width: 500px;
+      height: 500px;
+      top: -20%;
+      opacity: 0;
+    }
+  }
+
+  #services{
+    background-color: rgb(255, 246, 247);
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .flexServices{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flexServices b{
+    margin-top: 20px;
+  }
+  
+  .flexServices div{
+    flex: 1 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .flexServices img{
+    width: 80px;
+  }
+
+
+  #customer{
+    background-color: rgb(255, 246, 247);
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .flexCustomer{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 70px;
+    /* margin-right: 40px;
+    margin-left: 40px; */
+  }
+
+  .customer{
+    /* flex: 1 0 30%; */
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: .5px solid #e6e6e6;
+    background-color: white;
+    padding: 20px;
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .customer img{
+    width: 80px;
+    border-radius: 50%;
+  }
+
+/* customer fisrt paragraph */
+
+.customerName{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+  
+.customerReview{
+  font-size: 1.2em;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+#about{
+  /* background-color: rgb(255, 246, 247); */
+  padding-top: 50px;
+  /* padding-bottom: 50px; */
+}
+
+h2{
+  margin-bottom: 40px;
+}

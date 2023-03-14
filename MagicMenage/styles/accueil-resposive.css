@@ -1,0 +1,99 @@
+/* media for screen smallet than 970px */
+@media screen and (max-width: 960px) {
+    .flexCustomer {
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .flexCustomer>div:not(:first-child) {
+        display: none;
+    }
+
+    .customer {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    .customer img {
+        width: 120px;
+    }
+
+    #customer {
+        padding-bottom: 50px;
+    }
+
+    .flexCustomer>div:first-child {
+        position: relative;
+    }
+
+    .dot-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .dot-container span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .dot-container span.active {
+        background-color: #333;
+    }
+}
+
+/* media for screen smallet than 970px */
+@media screen and (max-width: 600px) {
+    .customer {
+        width: 80%;
+    }
+}
+
+/* media for screen smallet than 700px */
+@media screen and (max-width: 425px) {
+
+    .flexServices>div:not(:first-child) {
+        display: none;
+    }
+
+    .dot {
+        text-align: center;
+    }
+
+    .dot span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 5px;
+        background-color: gray;
+        cursor: pointer;
+    }
+
+    .dot span.active {
+        background-color: black;
+    }
+
+    .flexServices img{
+        width: 110px;
+    }
+
+    .flexServices b{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    h2{
+        font-size: 27px;
+    }
+    
+}

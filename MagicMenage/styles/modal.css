@@ -1,0 +1,48 @@
+.modalAccueil{
+    /* background-color: #ffe2fc; */
+    background-color: rgb(255, 246, 247);
+    width: 250px;
+    border-radius: 5px;
+    height: 350px;
+    z-index: 1;
+    /* position middle of the parent div */
+    position: relative;
+    top: 50%;
+    left: 10%;
+    opacity: .95;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+
+  }
+
+  .modalAccueil > div{
+    padding: 20px;
+  }
+
+  .modalHoraire{
+    height: 70%;
+  }
+
+  .titreModal{
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .jourModal{
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .heureModal{
+    font-size: 13px;
+  }
+
+  .modalTelephone{
+    background-color: black;
+    color: white;
+    /* border radius bottom */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    height: 30%;
+  }

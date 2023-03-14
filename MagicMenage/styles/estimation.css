@@ -1,0 +1,152 @@
+.flexChambres{
+    display: flex;
+    /* distance between */
+    justify-content: space-between;
+}
+
+.flexExtras{
+    display: flex;
+    /* distance between */
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.flexExtras p{
+    text-align: center;
+}
+
+.flexExtras img{
+    width: 100px;
+}
+
+.flexChambres p {
+    text-align: center;
+}
+
+#mainEstimation img{
+    cursor: pointer;
+}
+
+#mainEstimation{
+    border: rgb(216, 216, 216) 1px solid;
+    border-radius: 5px;
+    margin: 50px 200px ;
+    padding: 20px;
+}
+
+#form span{
+    color: red;
+    font-size: 20px;
+}
+
+h2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.titre{
+    margin-top: 50px;
+}
+
+.flexChambres img{
+    width: 180px;
+}
+
+#chambres{
+    display: none;
+}
+
+#extras{
+    display: none;
+}
+
+#pieces {
+    display: none
+}
+
+#formulaire2{
+    display: none;
+}
+
+#formulaire1{
+    /* display: none; */
+}
+.selected{
+    border: 2px solid rgb(0, 106, 255);
+    transform: scale(0.9);
+    padding: 10px;
+}
+
+#suivant{
+    display: none;
+}
+
+.divBouton{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+#form p{
+    margin-top: 10px;
+}
+
+#form{
+    border: rgb(237, 237, 237) 1px solid;
+    border-radius: 10px;
+    margin-top: 56px;
+    /* shadow */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: rgb(255, 246, 247);
+}
+
+#form p:first-of-type{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.red{
+    color: red;
+}
+
+/* media query for mobile view */
+@media screen and (max-width: 600px) {
+    .flexChambres img {
+      width: 60px;
+    }
+
+    #mainEstimation{
+        margin: 10px ;
+        /* padding: 20px; */
+    }
+    
+    .debutForm{
+        font-size: 13px;
+    }
+
+    .flexChambres p, .flexExtras p{
+        font-size: 10px;
+    }
+
+    .selected{
+        transform: scale(1.1);
+        padding: 5px;
+    }
+
+    .flexExtras img{
+        width: 40px;
+    }
+
+    #formulaire2 p {
+        font-size: 13px;
+    }
+
+    .titre{
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+  }

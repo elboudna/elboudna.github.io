@@ -1,0 +1,150 @@
+@import url("estimation.css");
+@import url("accueil.css");
+@import url("modal.css");
+@import url("accueil-resposive.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+
+*, ::after, ::before {
+  box-sizing: content-box;
+}
+
+body {
+  font-family: 'Jura', sans-serif;
+}
+
+.pink{
+background-color: #F6F7F8 ;
+}
+
+.blue{
+background-color: rgb(76, 183, 255);
+}
+
+.black{
+background-color: black;
+color: white;
+/* border-radius: 10px; */
+/* shadow */
+}
+
+header {
+/* background-color: rgb(77, 77, 77); */
+border-bottom: rgb(236, 236, 236) .5px solid;
+background-color: black;
+display: flex;
+position: sticky;
+top: 0;
+z-index: 100;
+justify-content: space-between;
+box-shadow: 0 0 100px 0 rgba(0, 0, 0, 1);
+color: white;
+}
+
+header > div{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+header div p {
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+}
+
+#button-addon1 {
+color: #ffc371;
+}
+
+i {
+color: #ffc371;
+}
+
+.form-control::placeholder {
+font-size: 0.95rem;
+color: #aaa;
+font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+box-shadow: none;
+}
+
+footer {
+  background: black ;
+  color: white;
+  }
+
+.text-center img{
+  /* width: 350px; */
+}
+
+.logo{
+  width: 120px;
+  margin: 10px;
+}
+
+.iconeTelephone{
+  width: 30px;
+  /* margin: 10px; */
+}
+
+.flexFooter{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 100px;
+  margin-right: 100px;
+  gap: 150px;
+  height: 260px;
+}
+
+.flexFooter img{
+  width: 150px;
+}
+
+.flexFooter > div{
+  margin-top: 50px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.flexFooterImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.flexFooterImage img{
+  width: 150px;
+}
+
+.iconeRS{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconeRS img{
+  width: 30px;
+}
+
+.justify{
+  text-align: justify;
+}
+
+
+.footerEstimation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerEstimation a{
+  color: rgb(66, 132, 255);
+}
