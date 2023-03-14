@@ -1,0 +1,276 @@
+html,body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.popup img {
+    border-radius: 5px;
+    width: 100px;
+}
+
+.popup div {
+    margin: 1rem;
+}
+
+.popup-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-map {
+    width: 70px;
+    cursor: pointer;
+}
+
+
+.flex-legende-map {
+    display: flex;
+    gap: 1px;
+}
+
+#map {
+    height: 800px;
+    width: 70%;
+}
+
+#legende {
+    height: 800px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titre-legende, .details {
+    cursor: pointer;
+}
+
+#approvisionnement {
+    background-color: #19966a;
+    height: 50%;
+    color: white;
+    
+}
+
+#appro-ini{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;    
+}
+
+#appro-sec{
+    display:none;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#developpement-technologique {
+    background-color: #e4a545;
+    height: 50%;
+    color: white;
+}
+
+#dev-tech-ini{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#dev-tech-sec{
+    display:none;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
+#approvisionnement p {
+    margin: 0;
+}
+
+#developpement-technologique p {
+    margin: 0;
+}
+
+.titre-legende {
+    font-size: 35px;
+}
+
+.details {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out, height 0s ease-in-out 1s;
+}
+
+.details.show {
+    opacity: 1;
+    height: auto;
+    transition-delay: 0s;
+}
+
+
+/*  div verte  */
+
+.div-convertisseurs{
+    background-color: #aa7479;
+}
+
+.div-grossistes{
+    background-color: #519368;
+}
+
+.div-impression{
+    background-color: #d4ae4b;
+}
+
+.div-co-emballage{
+    background-color: #99b8b9;
+}
+
+/* div jaune */
+
+.div-recherche{
+    background-color: #ab6f72;
+}
+
+.div-analyse-performance{
+    background-color: #519368;
+}
+
+.div-innocuite{
+    background-color: #d4ae4b;
+}
+
+.div-analyse-cycle-vie{
+    background-color: #ba674d;
+}
+
+.div-ecoconception{
+    background-color: #db9762;
+}
+
+.div-gestion-distribution{
+    background-color: #99b8b9;
+}
+
+.div-gestion-emballage{
+    background-color: #aa84b1;
+}
+
+.div-recyclage{
+    background-color: #c57faa;
+}
+
+.div-compostage{
+    background-color: #3c71b6;
+}
+
+
+/* fin couleur */
+
+.mini-div{
+    border-radius: 10px;
+    /* border-radius: 50px; */
+    margin: 20px;
+    height: 84px;
+}
+
+
+.flex-mini-div{
+    display: flex;
+    align-items: center;
+    border-bottom: solid .1px rgb(52, 52, 52);
+    /* border-radius: 55px; */
+    border-radius: 10px;
+    height: 84px;
+}
+
+#appro-sec > div >img{
+    width: 70px;
+}
+
+.icone-down-up{
+    width: 40px;
+}
+
+.div-icone-map{
+    width: 15%;
+    margin-left: 5px;
+}
+
+.div-texte{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.div-texte p{
+    margin: 0;
+    font-size: 20px;
+}
+
+.div-icone-up-down{
+    width: 15%;  
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.titre-mini-div{
+    margin: 40px;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    flex: 20%;
+    /* position: sticky;
+    top: 0;
+    z-index: 1; */
+}
+
+.flex-logo{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: none;
+    height: 118px;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.flex-logo img{
+    width: 90px;
+}
+
+/* Change the width and height of the scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+  }
+  
+  /* Change the background color of the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+  }
+  
+  /* Change the color of the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+  }
+  
+  /* Change the color of the scrollbar thumb on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  

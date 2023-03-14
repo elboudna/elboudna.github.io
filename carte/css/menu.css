@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Replica Pro New";
+    src: url("FontsFree-Net-ReplicaPro.ttf");
+  }
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    float: left;
+    position: relative;
+  }
+
+  nav{
+    padding-right: 10px;
+  }
+  
+  nav li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: rgb(0, 62, 126);
+    font-weight: 590;
+    font-family: "Replica Pro New";
+    font-size: 16px;
+    text-decoration-thickness: auto;
+    font-style: normal;
+    text-size-adjust: 100%;
+    
+  }
+
+  /* .test{
+    font-family: "Replica Pro";
+    font-weight: 400;
+  } */
+  
+  nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 240px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px -2px;
+    background-color: white;
+  }
+  
+
+
+  nav .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  nav .dropdown-menu li {
+    float: none;
+    height: 53px;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .dropdown-menu li a {
+    padding: 15px;
+    background-color: white;
+    color: #003e7e;
+    
+  }
+  
+  nav .dropdown-menu li a:hover {
+    /* background-color: #ddd; */
+  }
+  
+
+.bandeNoire{
+    background-color: black;
+    display: flex;
+    height: 35px;
+    padding-left: 14px;
+    padding-right: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bandeNoire img{
+    margin-top: 4px;
+}
+
+.bandeNoire a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Replica Pro', sans-serif;
+}
+
+.lienLogoCMN{
+    padding-left: 20px;
+}
+
+
+.lienCMN{
+    margin-right: 5px;
+}
+
+.lienCMN a{
+    padding-left: 16px;
+}
+
+.divMenu{
+    padding-left: 35px;
+    padding-right: 37px;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: black solid; */
+}
+
+.lienLogoITEGA{
+    padding-top: 20px;
+    padding-bottom: 16px;
+}
+
+.lienPages{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.loupe{
+    padding-left: 10px;
+    width: 16px;
+}
+
+.flexCenterMenuItems{
+    height: 156px;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.flexCenterMenuItems img{
+    width: 16px;
+    margin-bottom: 2px;
+}
+
+footer{
+    background-color: #003e7e;
+    height: 270px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-family: 'Replica Pro New', sans-serif;
+    
+}
+
+footer section{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    gap: 51px;
+    margin-left: 351.5px;
+    margin-right: 351.5px;
+}
+
+footer section div{
+    width: 366.6px;
+    
+}
+
+.lightBlue{
+    color: rgb(154, 216, 218);
+    letter-spacing: .5px;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+footer p, footer a{
+    color: white;
+    font-size: 18px;
+    line-height: 21.6px;
+    margin: 0;
+}
+
+/* footer first img */
+.logoQuebec{
+    width: 187px;
+    margin-top: 40px;
+}
+
+.espacementTexte p, .espacementTexte a{
+    margin-bottom: 9px;
+    text-decoration: none;
+}
+
+.espacementTexte a {
+    display: block;
+}
+
+.espacementTexte .communiquerItega{
+    height: 183px;
+    border-bottom: white solid .1px;
+}
+

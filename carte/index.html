@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/loading.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+
+
+  <script src="js/loading.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <title>Carte</title>
+
+  <!-- Security Headers -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"> -->
+
+
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<header>
+
+  <div class="bandeNoire">
+
+      <div class="lienLogoCMN">
+          <a href="https://www.cmaisonneuve.qc.ca/">
+              <img src="https://itega.ca/wp-content/uploads/2022/04/Group-9-1.svg" width="77" height="22" alt="">
+          </a>
+      </div>
+
+      <div class="lienCMN">
+          <a href="https://www.cmaisonneuve.qc.ca/emploi/offres-demploi/">Emploi</a>
+          <a href="https://www.cmaisonneuve.qc.ca/nous-joindre/">Nous joindre</a>
+      </div>
+  </div>
+
+
+
+  <!-- Menu -->
+  <div class="divMenu">
+      <div class="lienLogoITEGA">
+          <a href="https://itega.ca/">
+              <img width="240" height="117" src="https://itega.ca/wp-content/uploads/2022/04/Group-3.svg"
+                  alt="ITEGA – Institut de technologie des emballages et du génie alimentaire">
+          </a>
+      </div>
+
+
+      <div class="lienPages">
+          <nav>
+              <ul>
+                  <li class="dropdown">
+                      <div class="flexCenterMenuItems">
+                          <a href="#">À propos</a>
+                          <img src="img/fleche.png" alt="fleche">
+                      </div>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Mission</a></li>
+                          <li><a href="#">Soutien à la relève</a></li>
+                          <li><a href="#">Conseil d'orientaion</a></li>
+                          <li><a href="#">Partenaires</a></li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <div class="flexCenterMenuItems">
+                          <a class='test' href="#">Pourquoi l'ITEGA </a>
+                          <img src="img/fleche.png" alt="fleche">
+                      </div>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Expertise</a></li>
+                          <li><a href="#">Accompagnement</a></li>
+                          <li><a href="#">Financement</a></li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <div class="flexCenterMenuItems">
+                          <a href="#">Services</a>
+                          <img src="img/fleche.png" alt="fleche">
+                      </div>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Aide et soutien technique</a></li>
+                          <li><a href="#">Recherche et développement</a></li>
+                          <li><a href="#">Formations</a></li>
+                          <li><a href="#">Ressources</a></li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <div class="flexCenterMenuItems">
+                          <a href="#">Actualités et événements</a>
+                          <img src="img/fleche.png" alt="fleche">
+                      </div>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Actualités</a></li>
+                          <li><a href="#">Événements</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <div class="flexCenterMenuItems">
+                          <a href="#">Nous joindre</a>
+                      </div>
+                  </li>
+              </ul>
+          </nav>
+          <div>
+              <img class="loupe" src="img/loupe.png" alt="loupe">
+          </div>
+      </div>
+
+  </div>
+
+</header>
+
+<body>
+
+
+  <section id="loading-template">
+    <div class='loader-itega'>
+      <img src="img/logo/itega.jpg" alt="itega">
+    </div>
+
+    <div class="loader">
+      <div class="box box0">
+        <div></div>
+      </div>
+      <div class="box box1">
+        <div></div>
+      </div>
+      <div class="box box2">
+        <div></div>
+      </div>
+      <div class="box box3">
+        <div></div>
+      </div>
+      <div class="box box4">
+        <div></div>
+      </div>
+      <div class="box box5">
+        <div></div>
+      </div>
+      <div class="box box6">
+        <div></div>
+      </div>
+      <div class="box box7">
+        <div></div>
+      </div>
+    </div>
+
+    <div class="page-construction">
+      <p>Page en construction..</p> 
+    </div>
+    
+  </section>
+
+
+  <section class="flex-legende-map">
+    <div id="legende">
+      <div id="approvisionnement">
+        <section id="appro-ini">
+          <div>
+            <p class="titre-legende">APPROVISIONNEMENT</p>
+          </div>
+          <div data-js-details-appro>
+            <p class="details">(Cliquez pour plus de details)</p>
+          </div>
+        </section>
+
+        <section id="appro-sec">
+          <div class='titre-mini-div'>
+            <p>APPROVISIONNEMENT</p>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-convertisseurs">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btn1 src="img/iconeMapB/bmap1.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Convertisseurs / transformateurs en emballage</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              <div><img src="img/logo/123/ProAmpac-removebg-preview.png" alt="logoPA"></div>
+              <div><img src="img/logo/123/Emballage_st-jean.png" alt="logoSJ"></div>
+              <div><img src="img/logo/123/TC-removebg-preview.png" alt="logoTC"></div>
+            </div>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-grossistes">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btn2 src="img/iconeMapB/bmap2.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Grossistes / distributeurs / fournisseur d’emballages</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              <div><img src="img/logo/123/Carrousel-removebg-preview.png" alt="logoPA"></div>
+              <div><img src="img/logo/123/Duropac-removebg-preview.png" alt="logoSJ"></div>
+              <div><img src="img/logo/123/Talthi-removebg-preview.png" alt="logoTC"></div>
+            </div>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-impression">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btn3 src="img/iconeMapB/bmap3.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Service d’impression</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              <div><img src="img/logo/123/Alliance-Etiquette_et_solutions_emballage-removebg-preview.png" alt="logoPA"></div>
+              <div><img src="img/logo/123/Lelys-removebg-preview.png" alt="logoSJ"></div>
+              <div><img src="img/logo/123/Imprimerie_Ste-Julie-removebg-preview.png" alt="logoTC"></div>
+            </div>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-co-emballage">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btn4 src="img/iconeMapB/bmap4.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Service de co-emballage</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              <div><img src="img/logo/123/Abeilles_busy_bees-removebg-preview.png" alt="logoPA"></div>
+              <div><img src="img/logo/123/Axia-removebg-preview.png" alt="logoSJ"></div>
+              <div><img src="img/logo/123/Snack_depot-removebg-preview.png" alt="logoTC"></div>
+            </div>
+          </div>
+
+
+
+        </section>
+      </div>
+
+      <div id="developpement-technologique">
+        <section id="dev-tech-ini">
+          <div>
+            <p class="titre-legende">DÉVELOPPEMENT</p>
+          </div>
+          <div>
+            <p class="titre-legende">TECHNOLOGIQUE</p>
+          </div>
+          <div data-js-details-dev-tech>
+            <p class="details">(Cliquez pour plus de details)</p>
+          </div>
+        </section>
+
+        <section id="dev-tech-sec">
+          <div class='titre-mini-div'>
+            <p>DÉVELOPPEMENT TECHNOLOGIQUE</p>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-recherche">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btnA src="img/iconeMapB/bmapA.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Recherche et développement / adaptation technologique</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              <div><a href="http://itega.ca/" target="_blank"><img src="img/logo/ABC/ITEGA_CMYK-removebg-preview.png" alt="logoITEGA"></a></div>
+            </div>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-analyse-performance">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btnB src="img/iconeMapB/bmapB.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Analyse de performances</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              <div><img src="img/logo/ABC/Eurofins_Logo-removebg-preview.png" alt="logoEurofins"></div>
+              <div><img src="img/logo/ABC/AME_Roundup_2023-removebg-preview.png" alt="logoAME"></div>
+              <div><img src="img/logo/ABC/Micom-logo-removebg-preview.png" alt="logoMicom"></div>
+            </div>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-innocuite">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btnC src="img/iconeMapB/bmapC.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Innocuité de l’emballage</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              <div><img src="img/logo/ABC/ITEGA_CMYK-removebg-preview.png" alt="logoITEGA"></div>
+              <div><img src="img/logo/ABC/Intertek-Logo-removebg-preview.png" alt="logoIntertek"></div>
+              <div><img src="img/logo/ABC/Universities.png" alt="logoUniversité"></div>
+            </div>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-analyse-cycle-vie">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btnD src="img/iconeMapB/bmapD.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Analyses de cycle de vie d’emballages et de produits emballés</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              <div><img src="img/logo/ABC/CIRAIG_NVID_logo_RGB_no-tagline-1536x873-removebg-preview.png" alt="logoCiraig"></div>
+              <div><img src="img/logo/ABC/Ageco_couleur_hautedefinition-removebg-preview.png" alt="logoAgeco"></div>
+              <div><img src="img/logo/ABC/Ellio_RVB_tagline-removebg-preview.png" alt="logoEllio"></div>
+            </div>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-ecoconception">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btnE src="img/iconeMapB/bmapE.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Écoconception d’emballage</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              <div><img src="img/logo/ABC/EEQ_Logo_FR_EnsembleSeul_Avril2022_F-removebg-preview.png" alt="logoEEQ"></div>
+              <div><img src="img/logo/ABC/Cartier-emballage_logo-removebg-preview.png" alt="logoCartier"></div>
+              <div><img src="img/logo/ABC/Braque_logo_Final_Black-removebg-preview.png" alt="logoBraque"></div>
+              <div><img src="img/logo/ABC/Pigeon-Brands.svg" alt="logoPiegeon"></div>
+            </div>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-gestion-distribution">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btnF src="img/iconeMapB/bmapF.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Gestion de la distribution alimentaire</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              <!-- <div><img src="img/logo/ABC/Abeilles_busy_bees-removebg-preview.png" alt="logoPA"></div> -->
+              
+            </div>
+          </div>
+
+          <div class="mini-div">
+            <div class="flex-mini-div div-gestion-emballage">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btnG src="img/iconeMapB/bmapG.png">
+              </div>
+              <div class="div-texte">
+                <p>Gestion des emballages post consommation</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mini-div">
+            <div class="flex-mini-div div-recyclage">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btnH src="img/iconeMapB/bmapH.png">
+              </div>
+              <div class="div-texte">
+                <p>Recyclage</p>
+              </div>
+            </div>
+          </div>
+
+          <div data-js-mini-div class="mini-div">
+            <div class="flex-mini-div div-compostage">
+              <div class="div-icone-map">
+                <img class='icone-map' data-js-btnI src="img/iconeMapB/bmapI.png">
+              </div>
+              <div data-js-div-texte class="div-texte">
+                <p>Compostage/biométhanisation</p>
+              </div>
+              <div class="div-icone-down-up">
+                <img class="icone-down-up" src="img/icone/down.png" alt="down">
+              </div>
+            </div>
+            <div class="flex-logo">
+              
+            </div>
+          </div>
+            
+        </section>
+      </div>
+    </div>
+
+    <div id="map"></div>
+  </section>
+
+  <script src="js/effet.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="js/map.js"></script>
+
+</body>
+
+</html>
