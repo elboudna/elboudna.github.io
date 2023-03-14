@@ -27,7 +27,7 @@
   }
 
   .aProposImg{
-    background : url(/images/apropos.jpg) no-repeat center center/cover; ;
+    background : url(/MagicMenage/images/apropos.jpg) no-repeat center center/cover; ;
     height: 80vh;
     width: 100%;
   }
@@ -104,7 +104,7 @@
   }
   
   .hero {
-    background: url(/images/carou.png);
+    background: url(/MagicMenage/images/carou.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
