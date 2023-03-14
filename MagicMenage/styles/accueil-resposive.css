@@ -59,7 +59,7 @@
 }
 
 /* media for screen smallet than 700px */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
 
     .flexServices>div:not(:first-child) {
         display: none;
