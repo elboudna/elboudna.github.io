@@ -309,7 +309,7 @@ let markerItegaA = L.marker([45.578725518839754, -73.54517588465924], { icon: ma
 let templateItegaA = `
     <div class="popup">
         <div>
-            <img src="img/logo/ABC/ITEGA_CMYK_M-removebg-preview" alt="Itega" >
+            <img src="img/logo/ABC/ITEGA_CMYK_M-removebg-preview.png" alt="Itega" >
         </div>
         <div class='popup-text'>
             <h3>Itega</h3>
@@ -409,7 +409,7 @@ let markerItegaC = L.marker([45.578725518839754, -73.54517588465924], { icon: ma
 let templateItegaC = `
     <div class="popup">
         <div>
-            <img src="img/logo/ABC/ITEGA_CMYK_M-removebg-preview" alt="Itega" >
+            <img src="img/logo/ABC/ITEGA_CMYK_M-removebg-preview.png" alt="Itega" >
         </div>
         <div class='popup-text'>
             <h3>Itega</h3>
