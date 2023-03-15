@@ -1,13 +1,10 @@
 // animation des divs verte et jaune
 
 let divApprov = document.getElementById("approvisionnement"),
-  // divDetailsAppro = document.querySelector('[data-js-details-appro]'),
   approIni = document.getElementById('appro-ini'),
   approSec = document.getElementById('appro-sec'),
-  // details = document.querySelectorAll(".details"),
   titreLegende = document.querySelectorAll(".titre-legende"),
   divDevTech = document.getElementById("developpement-technologique");
-  // divDetailsDevTech = document.querySelector('[data-js-details-dev-tech]'),
   devTechIni = document.getElementById('dev-tech-ini'),
   devTechSec = document.getElementById('dev-tech-sec');
 
@@ -21,8 +18,6 @@ divApprov.addEventListener("click", function () {
   divApprov.style.transition = "all 1s ease-in-out";
   titreLegende[0].style.cursor = "none";
 
-  //show details[0]
-  // details[0].classList.add("show"); //add the show class to details[0]
 
   //remove style height 80% to divDevTech
   divDevTech.style.height = "20%";
@@ -35,8 +30,6 @@ divApprov.addEventListener("click", function () {
   approSec.style.display = "block";
   divApprov.style.backgroundColor = "#e1e2e4";
 
-  //hide details[1]
-  // details[1].classList.remove("show"); //remove the show class from details[1]
 });
 
 
@@ -50,8 +43,6 @@ divDevTech.addEventListener("click", function () {
   divDevTech.style.transition = "all 1s ease-in-out";
   titreLegende[1].style.cursor = "none";
 
-  //show details[1]
-  // details[1].classList.add("show"); //add the show class to details[1]
 
   //remove style height 80% to divApprov
   divApprov.style.height = "20%";
@@ -62,39 +53,16 @@ divDevTech.addEventListener("click", function () {
   devTechIni.style.pointerEvents = "none";
   devTechSec.style.display = "block";
   divDevTech.style.backgroundColor = "#e1e2e4";
-
-  //hide details[0]
-  // details[0].classList.remove("show"); //remove the show class from details[0]
 });
-
-
-// affichage des mini div au clique sur le paragraph details
-
-
-// divDetailsAppro.addEventListener("click", function () {
-//   approIni.style.display = "none";
-//   approIni.style.pointerEvents = "none";
-//   approSec.style.display = "block";
-//   divApprov.style.backgroundColor = "#e1e2e4";
-// });
-
-// divDetailsDevTech.addEventListener("click", function () {
-//   devTechIni.style.display = "none";
-//   devTechIni.style.pointerEvents = "none";
-//   devTechSec.style.display = "block";
-//   divDevTech.style.backgroundColor = "#e1e2e4";
-// });
-
-
-
 
 
 // animation de l'ouverture des mini divs
 
-const imgDownUp = document.querySelectorAll('.icone-down-up'),
+const imgDownUp = document.querySelectorAll('[data-js-img-down-up]'),
       miniDiv = document.querySelectorAll('[data-js-mini-div]'),
       divTexte = document.querySelectorAll('[data-js-div-texte]'),
-      flexLogo = document.querySelectorAll('.flex-logo');
+      flexLogo = document.querySelectorAll('[data-js-flex-logo]'),
+      sousCat = document.querySelectorAll('[data-js-sous-cat]');
 
 function animateMiniDivHeight(element, height, duration) {
   let startHeight = element.offsetHeight;
@@ -142,88 +110,67 @@ function animateIconeMap() {
 
 animateIconeMap();
 
-// for (let i = 0; i < imgDownUp.length; i++) {
-  
-//   imgDownUp[i].addEventListener("click", function () {
-//     // Close any open miniDiv elements
-//       for (let j = 0; j < miniDiv.length; j++) {
-//         if (miniDiv[j].style.height != '0px' && j != i) {
-//           animateMiniDivHeight(miniDiv[j], 84, 500);
-//           imgDownUp[j].src = "img/icone/down.png";
-//           flexLogo[j].style.display = "none";
-//         }
-//       }
-
-//       // Open or close the clicked miniDiv element
-//       if (imgDownUp[i].src.match("down.png")) {
-//         imgDownUp[i].src = "img/icone/up.png";
-//         flexLogo[i].display = "none";
-//         animateMiniDivHeight(miniDiv[i], 200, 500);
-//         // wait for the animation to finish before displaying the logo
-//         setTimeout(function () {
-//           flexLogo[i].style.display = "flex";
-//         }, 500);
-//       } else {
-//         imgDownUp[i].src = "img/icone/down.png";
-//         animateMiniDivHeight(miniDiv[i], 84, 500);
-//         flexLogo[i].style.display = "none";
-//       }
-//   });
-
-//   divTexte[i].addEventListener("click", function () {
-//     // Close any open miniDiv elements
-//       for (let j = 0; j < miniDiv.length; j++) {
-//         if (miniDiv[j].style.height != '0px' && j != i) {
-//           animateMiniDivHeight(miniDiv[j], 84, 500);
-//           imgDownUp[j].src = "img/icone/down.png";
-//           flexLogo[j].style.display = "none";
-//         }
-//       }
-
-//       // Open or close the clicked miniDiv element
-//       if (imgDownUp[i].src.match("down.png")) {
-//         imgDownUp[i].src = "img/icone/up.png";
-//         flexLogo[i].display = "none";
-//         animateMiniDivHeight(miniDiv[i], 200, 500);
-//         // wait for the animation to finish before displaying the logo
-//         setTimeout(function () {
-//           flexLogo[i].style.display = "flex";
-//         }, 500);
-//       } else {
-//         imgDownUp[i].src = "img/icone/down.png";
-//         animateMiniDivHeight(miniDiv[i], 84, 500);
-//         flexLogo[i].style.display = "none";
-//       }
-//   });
-// }
-
 function toggleMiniDiv(i) {
   // Close any open miniDiv elements
   for (let j = 0; j < miniDiv.length; j++) {
     if (miniDiv[j].style.height != '0px' && j != i) {
       animateMiniDivHeight(miniDiv[j], 84, 500);
       imgDownUp[j].src = "img/icone/down.png";
-      flexLogo[j].style.display = "none";
+      for (let k = 0; k < flexLogo.length; k++) {
+        flexLogo[k].style.display = "none";
+      }
+      for (let k = 0; k < sousCat.length; k++) {
+        sousCat[k].style.display = "none";
+      }
     }
   }
 
-  // Open or close the clicked miniDiv element
-  if (imgDownUp[i].src.match("down.png")) {
-    imgDownUp[i].src = "img/icone/up.png";
-    flexLogo[i].display = "none";
-    animateMiniDivHeight(miniDiv[i], 200, 500);
-    // wait for the animation to finish before displaying the logo
-    setTimeout(function () {
-      flexLogo[i].style.display = "flex";
-    }, 500);
-  } else {
-    imgDownUp[i].src = "img/icone/down.png";
-    animateMiniDivHeight(miniDiv[i], 84, 500);
-    flexLogo[i].style.display = "none";
+  // Open the clicked miniDiv element
+  if (i !== 9) {
+    if (imgDownUp[i].src.match("down.png")) {
+
+      flexLogo[i].display = "none";
+      imgDownUp[i].src = "img/icone/up.png";
+      animateMiniDivHeight(miniDiv[i], 200, 500);
+      // wait for the animation to finish before displaying the logo
+      setTimeout(function () {
+        flexLogo[i].style.display = "flex";
+      }, 500);
+      // Close the clicked miniDiv element
+    } else {
+      imgDownUp[i].src = "img/icone/down.png";
+      animateMiniDivHeight(miniDiv[i], 84, 500);
+      flexLogo[i].style.display = "none";
+    }
+  }
+  else if (i === 9) {
+    if (imgDownUp[i].src.match("down.png")) {
+      imgDownUp[i].src = "img/icone/up.png";
+      animateMiniDivHeight(miniDiv[i], 620, 500);
+      // wait for the animation to finish before displaying the logo
+      setTimeout(function () {
+        for (let k = 9; k < flexLogo.length; k++) {
+          flexLogo[k].style.display = "flex";
+        }
+        for (let k = 0; k < sousCat.length; k++) {
+          sousCat[k].style.display = "block";
+        }
+      }, 500);
+      // Close the clicked miniDiv element
+    } else {
+      imgDownUp[i].src = "img/icone/down.png";
+      animateMiniDivHeight(miniDiv[i], 84, 500);
+      for (let k = 9; k < flexLogo.length; k++) {
+        flexLogo[k].style.display = "none";
+      }
+      for (let k = 0; k < sousCat.length; k++) {
+        sousCat[k].style.display = "none";
+      }
+    }
   }
 }
 
-for (let i = 0; i < imgDownUp.length; i++) {
+for (let i = 0; i < miniDiv.length; i++) {
 
   imgDownUp[i].style.cursor = "pointer";
   divTexte[i].style.cursor = "pointer";
@@ -231,7 +178,7 @@ for (let i = 0; i < imgDownUp.length; i++) {
   imgDownUp[i].addEventListener("click", function () {
     toggleMiniDiv(i);
   });
-
+  
   divTexte[i].addEventListener("click", function () {
     toggleMiniDiv(i);
   });
