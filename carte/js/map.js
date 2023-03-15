@@ -627,7 +627,7 @@ let markerSobeys = L.marker([45.61267045127222, -73.6056609], { icon: markerF })
 let templateMetro = `
     <div class="popup">
         <div>
-            <img src="metro.jpg" alt="Metro" >
+            <img src="img/logo/ABC/Metro_Inc._logo.png" alt="Metro" >
         </div>
         <div class='popup-text'>
             <h3>Metro</h3>
@@ -640,7 +640,7 @@ markerMetro.bindPopup(templateMetro);
 let templateLoblaw = `
     <div class="popup">
         <div>
-            <img src="loblaw.jpg" alt="Loblaw" >
+            <img src="img/logo/ABC/Loblaws-removebg-preview.png" alt="Loblaw" >
         </div>
         <div class='popup-text'>
             <h3>Loblaw</h3>
@@ -653,7 +653,7 @@ markerLoblaw.bindPopup(templateLoblaw);
 let templateSobeys = `
     <div class="popup">
         <div>
-            <img src="sobey.jpg" alt="Sobey" >
+            <img src="img/logo/ABC/Sobeys-removebg-preview.png" alt="Sobey" >
         </div>
         <div class='popup-text'>
             <h3>Sobey</h3>
@@ -680,7 +680,7 @@ let markerCourchesne2 = L.marker([45.53558555444583, -73.6449954965504], { icon:
 let templateColabor = `
     <div class="popup">
         <div>
-            <img src="colabor.jpg" alt="Colabor" >
+            <img src="img/logo/ABC/Colabor-removebg-preview.png" alt="Colabor" >
         </div>
         <div class='popup-text'>
             <h3>Colabor</h3>
@@ -693,7 +693,7 @@ markerColabor.bindPopup(templateColabor);
 let templateSysco = `
     <div class="popup">
         <div>
-            <img src="sysco.jpg" alt="Sysco" >
+            <img src="img/logo/ABC/Sysco-Logo-removebg-preview.png" alt="Sysco" >
         </div>
         <div class='popup-text'>
             <h3>Sysco</h3>
@@ -706,7 +706,7 @@ markerSysco.bindPopup(templateSysco);
 let templateGordon1 = `
     <div class="popup">
         <div>
-            <img src="gordon.jpg" alt="Gordon" >
+            <img src="img/logo/ABC/Gordon_Service-alimentaire-removebg-preview.png" alt="Gordon" >
         </div>
         <div class='popup-text'>
             <h3>Service Alimentaire Gordon (Montreal)</h3>
@@ -719,7 +719,7 @@ markerGordon1.bindPopup(templateGordon1);
 let templateGordon2 = `
     <div class="popup">
         <div>
-            <img src="gordon.jpg" alt="Gordon" >
+            <img src="img/logo/ABC/Gordon_Service-alimentaire-removebg-preview.png" alt="Gordon" >
         </div>
         <div class='popup-text'>
             <h3>Service Alimentaire Gordon (Quebec)</h3>
@@ -732,7 +732,7 @@ markerGordon2.bindPopup(templateGordon2);
 let templateCourchesne1 = `
     <div class="popup">
         <div>
-            <img src="courchesne.jpg" alt="Courchesne" >
+            <img src="img/logo/ABC/Courschesne-Larose-removebg-preview.png" alt="Courchesne" >
         </div>
         <div class='popup-text'>
             <h3>Courchesne Larose (Montreal)</h3>
@@ -746,7 +746,7 @@ markerCourchesne1.bindPopup(templateCourchesne1);
 let templateCourchesne2 = `
     <div class="popup">
         <div>
-            <img src="courchesne.jpg" alt="Courchesne" >
+            <img src="img/logo/ABC/Courschesne-Larose-removebg-preview.png" alt="Courchesne" >
         </div>
         <div class='popup-text'>
             <h3>Courchesne Larose (Laval)</h3>
@@ -768,7 +768,7 @@ let markerVoila = L.marker([45.476962335284426, -73.79766461383103], { icon: mar
 let templateMaturin = `
     <div class="popup">
         <div>
-            <img src="maturin.jpg" alt="Maturin" >
+            <img src="img/logo/ABC/Maturin-Logo-removebg-preview.png" alt="Maturin" >
         </div>
         <div class='popup-text'>
             <h3>Maturin</h3>
@@ -782,7 +782,7 @@ markerMaturin.bindPopup(templateMaturin);
 let templateLufa = `
     <div class="popup">
         <div>
-            <img src="lufa.jpg" alt="Lufa" >
+            <img src="img/logo/ABC/Fermes-Lufa_Logo-removebg-preview.png" alt="Lufa" >
         </div>
         <div class='popup-text'>
             <h3>Fermes Lufa</h3>
@@ -796,7 +796,7 @@ markerLufa.bindPopup(templateLufa);
 let templateVoila = `
     <div class="popup">
         <div>
-            <img src="voila.jpg" alt="Voila" >
+            <img src="img/logo/ABC/Voila_par_IGA-removebg-preview.png" alt="Voila" >
         </div>
         <div class='popup-text'>
             <h3>Voila par IGA</h3>
@@ -804,6 +804,8 @@ let templateVoila = `
         </div>
     </div>
 `;
+
+markerVoila.bindPopup(templateVoila);
 
 
 // ADA : 45.53069307910462, -73.5633780306883
@@ -815,7 +817,7 @@ let markerCqcd = L.marker([45.526871883156154, -73.57501417186553], { icon: mark
 let templateAda = `
     <div class="popup">
         <div>
-            <img src="ada.jpg" alt="Ada" >
+            <img src="img/logo/ABC/Association_des_detaillants_en_alimentation_du_Quebec_ADAQ-removebg-preview.png" alt="Ada" >
         </div>
         <div class='popup-text'>
             <h3>ADA</h3>
@@ -829,7 +831,7 @@ markerAda.bindPopup(templateAda);
 let templateCqcd = `
     <div class="popup">
         <div>
-            <img src="cqcd.jpg" alt="Cqcd" >
+            <img src="img/logo/ABC/CQCD-Logo_Crop-removebg-preview.png" alt="Cqcd" >
         </div>
         <div class='popup-text'>
             <h3>CQCD</h3>
