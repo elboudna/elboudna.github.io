@@ -301,6 +301,8 @@ btn4.addEventListener('click', function() {
     });
 });
 
+
+
 // Role A
 
 // itega : 45.578725518839754, -73.54517588465924
@@ -849,7 +851,6 @@ let btnF = document.querySelector('[data-js-btnF]');
 
 btnF.addEventListener('click', function() {
   isMarkerVisibleF = !isMarkerVisibleF;
-
   markersF.forEach(marker => {
     if (isMarkerVisibleF) {
       marker.addTo(map);
@@ -860,4 +861,52 @@ btnF.addEventListener('click', function() {
   });
 });
 
+const markersApprovisionnement = [markerTCPackaging, markerProAmpac, markerStJean, markerCarrousel, markerDuropac, markerTalthi, markerLelys, markerSteJulie, markerAlliance, markerAbeille, markerAxia, markerSnackdepot];
+
+
+const markersDevTech = [markerItegaA, markerEurofins, markerRoundup, markerMicom, markerItegaC, markerInteretec, markerUq, markerCiraig, markerAgeco, markerEllio, markerEeq, markerCartier, markerBraque, markerPigeon, markerSysco, markerGordon1, markerGordon2, markerCourchesne1, markerCourchesne2, markerMaturin, markerLufa, markerVoila, markerAda, markerCqcd, markerLoblaw, markerSobeys, markerMetro, markerColabor];
+
+
+let approIni = document.getElementById('appro-ini'),
+    devTechIni = document.getElementById('dev-tech-ini');
+
+let cpt = 0;
+
+approIni.addEventListener("click", function() {
+    if (cpt === 0) {
+        markersDevTech.forEach(marker => {
+            marker.remove();
+            marker.closePopup();
+        });
+    } else {
+        markersApprovisionnement.forEach(marker => {
+            marker.addTo(map);
+        });
+
+        markersDevTech.forEach(marker => {
+            marker.remove();
+            marker.closePopup();
+        });
+    }
+    cpt++;
+});
+
+devTechIni.addEventListener("click", function() {
+    if (cpt === 0) {
+        markersApprovisionnement.forEach(marker => {
+            marker.remove();
+            marker.closePopup();
+        });
+    } else {
+        markersDevTech.forEach(marker => {
+            marker.addTo(map);
+        });
+
+        markersApprovisionnement.forEach(marker => {
+            marker.remove();
+            marker.closePopup();
+        });
+    }
+    cpt++;
+});
 

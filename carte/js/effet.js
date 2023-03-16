@@ -1,10 +1,11 @@
+
 // animation des divs verte et jaune
 
 let divApprov = document.getElementById("approvisionnement"),
   approIni = document.getElementById('appro-ini'),
   approSec = document.getElementById('appro-sec'),
   titreLegende = document.querySelectorAll(".titre-legende"),
-  divDevTech = document.getElementById("developpement-technologique");
+  divDevTech = document.getElementById("developpement-technologique"),
   devTechIni = document.getElementById('dev-tech-ini'),
   devTechSec = document.getElementById('dev-tech-sec');
 
@@ -30,6 +31,20 @@ divApprov.addEventListener("click", function () {
   approSec.style.display = "block";
   divApprov.style.backgroundColor = "#e1e2e4";
 
+
+  // markersApprovisionnement.forEach(marker => {
+  //   console.log("ici");
+  //   marker.remove();
+  //   marker.closePopup();
+  // });
+
+
+  // markersApprovisionnement.forEach(marker => {
+  //   console.log("ici2");
+  //     marker.addTo(map);
+  // });
+  
+
 });
 
 
@@ -53,6 +68,7 @@ divDevTech.addEventListener("click", function () {
   devTechIni.style.pointerEvents = "none";
   devTechSec.style.display = "block";
   divDevTech.style.backgroundColor = "#e1e2e4";
+
 });
 
 
