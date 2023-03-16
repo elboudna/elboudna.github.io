@@ -206,19 +206,22 @@ const templateItegaA = createPopupTemplate('Itega', 'Montréal', 'img/logo/ABC/I
 
 markerItegaA.bindPopup(templateItegaA);
 
+const markersA = [markerItegaA];
+
 let isMarkerVisibleA = true;
 let btnA = document.querySelector('[data-js-btnA]');
 
 btnA.addEventListener('click', function () {
     isMarkerVisibleA = !isMarkerVisibleA;
-    // Show or hide the marker based on the current visibility state
-    if (isMarkerVisibleA) {
-        markerItegaA.addTo(map);
-    }
-    else {
-        markerItegaA.remove();
-        markerItegaA.closePopup();
-    }
+
+    markersA.forEach(marker => {
+        if (isMarkerVisibleA) {
+            marker.addTo(map);
+        } else {
+            marker.remove();
+            marker.closePopup();
+        }
+    });
 });
 
 // Role B
