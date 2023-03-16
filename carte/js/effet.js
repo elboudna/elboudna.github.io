@@ -31,20 +31,6 @@ divApprov.addEventListener("click", function () {
   approSec.style.display = "block";
   divApprov.style.backgroundColor = "#e1e2e4";
 
-
-  // markersApprovisionnement.forEach(marker => {
-  //   console.log("ici");
-  //   marker.remove();
-  //   marker.closePopup();
-  // });
-
-
-  // markersApprovisionnement.forEach(marker => {
-  //   console.log("ici2");
-  //     marker.addTo(map);
-  // });
-  
-
 });
 
 
@@ -127,6 +113,7 @@ function animateIconeMap() {
 animateIconeMap();
 
 function toggleMiniDiv(i) {
+  let height = 200;
   // Close any open miniDiv elements
   for (let j = 0; j < miniDiv.length; j++) {
     if (miniDiv[j].style.height != '0px' && j != i) {
@@ -144,10 +131,14 @@ function toggleMiniDiv(i) {
   // Open the clicked miniDiv element
   if (i !== 9) {
     if (imgDownUp[i].src.match("down.png")) {
-
       flexLogo[i].display = "none";
       imgDownUp[i].src = "img/icone/up.png";
-      animateMiniDivHeight(miniDiv[i], 200, 500);
+      if(flexLogo[i].querySelectorAll('div').length <= 3){
+        animateMiniDivHeight(miniDiv[i], height, 500);
+      }else{
+        animateMiniDivHeight(miniDiv[i], height + 40, 500);
+        flexLogo[i].style.marginTop = "20px";
+      }
       // wait for the animation to finish before displaying the logo
       setTimeout(function () {
         flexLogo[i].style.display = "flex";
@@ -160,9 +151,15 @@ function toggleMiniDiv(i) {
     }
   }
   else if (i === 9) {
+    for (let k = i; k < flexLogo.length; k++) {
+      if(flexLogo[k].querySelectorAll('div').length > 3){
+        flexLogo[k].style.marginTop = "30px";
+        flexLogo[k].style.marginBottom = "30px";
+      }
+    }
     if (imgDownUp[i].src.match("down.png")) {
       imgDownUp[i].src = "img/icone/up.png";
-      animateMiniDivHeight(miniDiv[i], 620, 500);
+      animateMiniDivHeight(miniDiv[i], 700, 500);
       // wait for the animation to finish before displaying the logo
       setTimeout(function () {
         for (let k = 9; k < flexLogo.length; k++) {

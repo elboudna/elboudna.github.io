@@ -245,11 +245,20 @@ body {
 .flex-logo {
     margin-left: 10px;
     margin-right: 10px;
+    /* margin-bottom: 15px; */
     height: 118px;
     display: none;
     justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 15px;
     align-items: center;
+}
+
+.flex-logo > div {
+    width: calc(33.33% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .flex-logo img {
