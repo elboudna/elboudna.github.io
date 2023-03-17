@@ -159,7 +159,7 @@ function toggleMiniDiv(i) {
     }
     if (imgDownUp[i].src.match("down.png")) {
       imgDownUp[i].src = "img/icone/up.png";
-      animateMiniDivHeight(miniDiv[i], height + 500, 500);
+      animateMiniDivHeight(miniDiv[i], height + 490, 500);
       // wait for the animation to finish before displaying the logo
       setTimeout(function () {
         for (let k = 9; k < flexLogo.length; k++) {
