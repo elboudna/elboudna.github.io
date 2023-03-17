@@ -70,17 +70,21 @@ let btn1 = document.querySelector('[data-js-btn1]');
 
 btn1.addEventListener('click', function () {
     isMarkerVisible1 = !isMarkerVisible1;
-
+  
     markers1.forEach(marker => {
-        if (isMarkerVisible1) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-            marker.closePopup();
-        }
+      if (!isMarkerVisible1) {
+        // Make marker bigger
+        marker.options.icon.options.iconSize = [70, 70];
+        marker.options.icon.options.iconAnchor = [35, 35];
+      } else {
+        // Make marker smaller
+        marker.options.icon.options.iconSize = [60, 60];
+        marker.options.icon.options.iconAnchor = [30, 30];
+      }
+      marker.setIcon(marker.options.icon);
+      marker.update();
     });
-});
-
+  });
 
 // ROLE 2
 
@@ -195,7 +199,6 @@ btn4.addEventListener('click', function () {
 });
 
 
-
 // Role A
 
 // itega : 45.578725518839754, -73.54517588465924
@@ -301,7 +304,6 @@ btnC.addEventListener('click', function () {
 //ageco : 45.533762809966454, -73.61575335943122
 //ellio  : 45.52715099541855, -73.59714823059552
 
-
 let markerCiraig = L.marker([45.49654272243115, -73.61807158465638], { icon: markerD }).addTo(map);
 let markerAgeco = L.marker([45.533762809966454, -73.61575335943122], { icon: markerD }).addTo(map);
 let markerEllio = L.marker([45.52715099541855, -73.59714823059552], { icon: markerD }).addTo(map);
@@ -370,7 +372,6 @@ btnE.addEventListener('click', function () {
         }
     });
 });
-
 
 // Role F
 
