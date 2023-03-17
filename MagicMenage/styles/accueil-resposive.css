@@ -51,14 +51,14 @@
     }
 }
 
-/* media for screen smallet than 970px */
+/* media for screen smallet than 600px */
 @media screen and (max-width: 600px) {
     .customer {
         width: 80%;
     }
 }
 
-/* media for screen smallet than 700px */
+/* media for screen smallet than 450px */
 @media screen and (max-width: 450px) {
 
     .flexServices>div:not(:first-child) {
@@ -94,6 +94,84 @@
 
     h2{
         font-size: 27px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    #about{
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    #services{
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     
+    #customer{
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+
+    .flexServices{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    .flexAPropos{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    .flexCustomer{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    
+}
+
+/* media for screen smallet than 1020px */
+
+@media screen and (max-width: 1020px) {
+    .flexAPropos{
+        flex-direction: column;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .aProposImg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flexDescription > div{
+        padding: 40px;
+    }
+}
+
+/* media for screen smaller than 680px */
+
+@media screen and (max-width: 680px) {
+    .flexAnimation div{
+        text-align: center;
+        font-size: 15px;
+    }
+
+}
+
+/* media for screen smaller than 380px */
+
+@media screen and (max-width: 380px) {
+    .flexAnimation div{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .flexAPropos{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
 }

@@ -24,12 +24,9 @@ background-color: rgb(76, 183, 255);
 .black{
 background-color: black;
 color: white;
-/* border-radius: 10px; */
-/* shadow */
 }
 
 header {
-/* background-color: rgb(77, 77, 77); */
 border-bottom: rgb(236, 236, 236) .5px solid;
 background-color: black;
 display: flex;
@@ -76,10 +73,6 @@ footer {
   background: black ;
   color: white;
   }
-
-.text-center img{
-  /* width: 350px; */
-}
 
 .logo{
   width: 120px;
@@ -147,4 +140,25 @@ footer {
 
 .footerEstimation a{
   color: rgb(66, 132, 255);
+}
+
+
+@media screen and (max-width: 380px) {
+  .logo{
+      width: 90px;
+  }
+
+  .iconeTelephone{
+      width: 25px;
+  }
+
+  header p{
+      font-size: 0.9rem;
+  }
+  
+  header > div{
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
 }
