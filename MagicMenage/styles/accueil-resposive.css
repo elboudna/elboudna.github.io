@@ -83,70 +83,70 @@
         background-color: black;
     }
 
-    .flexServices img{
+    .flexServices img {
         width: 110px;
     }
 
-    .flexServices b{
+    .flexServices b {
         margin-top: 30px;
         font-size: 20px;
     }
 
-    h2{
+    h2 {
         font-size: 27px;
         margin-bottom: 0px;
         margin-top: 0px;
     }
 
-    #about{
-        margin-top: 30px;
+    #about {
+        margin-top: 50px;
         padding: 0;
     }
 
-    #services{
+    #services {
         margin-top: 30px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-    
-    #customer{
-        margin-top: 30px;
-        padding-top: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
-    .flexServices{
-        margin-top: 10px;
-        margin-bottom: 0px;
+    #customer {
+        margin-top: 30px;
+        padding-top: 50px;
     }
 
-    .flexAPropos{
+    .flexServices {
         margin-top: 30px;
         margin-bottom: 0px;
     }
 
-    .flexCustomer{
-        margin-top: 10px;
+    .flexAPropos {
+        margin-top: 50px;
         margin-bottom: 0px;
     }
-    
+
+    .flexCustomer {
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
 }
 
 /* media for screen smallet than 1020px */
 
 @media screen and (max-width: 1020px) {
-    .flexAPropos{
+    .flexAPropos {
         flex-direction: column;
         margin-left: 40px;
         margin-right: 40px;
     }
 
-    .aProposImg{
+    .aProposImg {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .flexDescription > div{
+    .flexDescription>div {
         padding: 40px;
     }
 }
@@ -154,7 +154,7 @@
 /* media for screen smaller than 680px */
 
 @media screen and (max-width: 680px) {
-    .flexAnimation div{
+    .flexAnimation div {
         text-align: center;
         font-size: 15px;
     }
@@ -164,14 +164,92 @@
 /* media for screen smaller than 380px */
 
 @media screen and (max-width: 380px) {
-    .flexAnimation div{
+    .flexAnimation div {
         text-align: center;
         font-size: 12px;
     }
 
-    .flexAPropos{
+    .flexAPropos {
         margin-left: 20px;
         margin-right: 20px;
     }
 
 }
+
+
+/* For screens smaller than 768px (tablets) */
+@media (max-width: 768px) {
+    div.drop {
+        top: -85%;
+        border-radius: 100% 5% 100% 100%;
+    }
+
+    div.drop-container:before,
+    div.drop-container:after {
+        top: 60%;
+    }
+}
+
+/* For screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    div.drop {
+        top: -75%;
+        border-radius: 100%;
+    }
+
+    div.drop-container:before,
+    div.drop-container:after {
+        top: 65%;
+    }
+
+    @keyframes dripple {
+        0% {
+            width: 75px;
+            height: 75px;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        100% {
+            width: 250px;
+            height: 250px;
+            top: -10%;
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .hero-text {
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .drop-container{
+        display: none;
+    }
+    .hero-text {
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    .hero{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-description{
+        text-align: center;
+    }
+
+    .cirle-responsive{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) {}
+
+/* media smaller than 1100px */
