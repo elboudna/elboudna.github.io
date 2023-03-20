@@ -30,17 +30,17 @@ let markerG = createIcon('img/iconeMap/mapG.png');
 let markerH = createIcon('img/iconeMap/mapH.png');
 let markerI = createIcon('img/iconeMap/mapI.png');
 
-function createPopupTemplate(name, city, imgSrc) {
+function createPopupTemplate(cat ,logo, name, adresse) {
     return `
-      <div class="popup">
-          <div>
-              <img src="${imgSrc}" alt="${name}" >
-          </div>
-          <div class='popup-text'>
-              <h3>${name}</h3>
-              <p>${city}</p>
-          </div>
-      </div>
+        <div class='${cat} categorie'>
+            <h3>${name}</h3>
+        </div>
+        <div>
+            <img src="${logo}" alt="logo" width="100px">
+        </div>
+        <div>
+            <p>${adresse}</p>
+        </div>
     `;
 }
 
@@ -55,9 +55,9 @@ let markerTCPackaging = L.marker([45.62306097667415, -73.58284014432547], { icon
 let markerProAmpac = L.marker([45.701837574721466, -73.75424020449023], { icon: marker1 }).addTo(map);
 let markerStJean = L.marker([45.36143507347949, -73.28754397104049], { icon: marker1 }).addTo(map);
 
-const templateTCPackaging = createPopupTemplate('TC Packaging', 'Montréal', 'img/logo/123/TC-removebg-preview.png');
-const templateProAmpac = createPopupTemplate('ProAmpac', 'Montréal', 'img/logo/123/ProAmpac-removebg-preview.png');
-const templateStJean = createPopupTemplate('St Jean', 'Montréal', 'img/logo/123/Emballage_st-jean.png');
+const templateTCPackaging = createPopupTemplate('cat-conv','img/logo/123/TC-removebg-preview.png', 'TC Packaging', '2525 av aird');
+const templateProAmpac = createPopupTemplate('cat-conv', 'ProAmpac', 'Montréal', 'img/logo/123/ProAmpac-removebg-preview.png');
+const templateStJean = createPopupTemplate('cat-conv', 'St Jean', 'Montréal', 'img/logo/123/Emballage_st-jean.png');
 
 markerTCPackaging.bindPopup(templateTCPackaging);
 markerProAmpac.bindPopup(templateProAmpac);
@@ -70,21 +70,30 @@ let btn1 = document.querySelector('[data-js-btn1]');
 
 btn1.addEventListener('click', function () {
     isMarkerVisible1 = !isMarkerVisible1;
-  
+
     markers1.forEach(marker => {
-      if (!isMarkerVisible1) {
-        // Make marker bigger
-        marker.options.icon.options.iconSize = [70, 70];
-        marker.options.icon.options.iconAnchor = [35, 35];
-      } else {
-        // Make marker smaller
-        marker.options.icon.options.iconSize = [60, 60];
-        marker.options.icon.options.iconAnchor = [30, 30];
-      }
-      marker.setIcon(marker.options.icon);
-      marker.update();
+        if (isMarkerVisible1) {
+            marker.addTo(map);
+        } else {
+            marker.remove();
+            marker.closePopup();
+        }
     });
-  });
+});
+
+// btn1.addEventListener('click', function () {
+//     // remove all markers from the map
+//     map.eachLayer(function (layer) {
+//         if (layer instanceof L.Marker) {
+//             map.removeLayer(layer);
+//         }
+//     });
+
+//     // add only markersApprovisionnement to the map
+//     markers1.forEach(function (marker) {
+//         marker.addTo(map);
+//     });
+// });
 
 // ROLE 2
 
@@ -97,9 +106,9 @@ let markerCarrousel = L.marker([45.56961302127696, -73.425589], { icon: marker2 
 let markerDuropac = L.marker([45.37091533159878, -73.52275776932923], { icon: marker2 }).addTo(map);
 let markerTalthi = L.marker([45.62733599060354, -72.99022332883959], { icon: marker2 }).addTo(map);
 
-const templateCarrousel = createPopupTemplate('Carrousel', 'Montréal', 'img/logo/123/Carrousel-removebg-preview.png');
-const templateDuropac = createPopupTemplate('Duropac', 'Montréal', 'img/logo/123/Duropac-removebg-preview.png');
-const templateTalthi = createPopupTemplate('Talthi', 'Montréal', 'img/logo/123/Talthi-removebg-preview.png');
+const templateCarrousel = createPopupTemplate('cat-gros', 'Carrousel', 'Montréal', 'img/logo/123/Carrousel-removebg-preview.png');
+const templateDuropac = createPopupTemplate('cat-gros', 'Duropac', 'Montréal', 'img/logo/123/Duropac-removebg-preview.png');
+const templateTalthi = createPopupTemplate('cat-gros', 'Talthi', 'Montréal', 'img/logo/123/Talthi-removebg-preview.png');
 
 
 markerCarrousel.bindPopup(templateCarrousel);
@@ -199,6 +208,7 @@ btn4.addEventListener('click', function () {
 });
 
 
+
 // Role A
 
 // itega : 45.578725518839754, -73.54517588465924
@@ -226,6 +236,25 @@ btnA.addEventListener('click', function () {
         }
     });
 });
+
+// btn1.addEventListener('click', function () {
+//     isMarkerVisible1 = !isMarkerVisible1;
+  
+//     markers1.forEach(marker => {
+//       if (!isMarkerVisible1) {
+//         // Make marker bigger
+//         marker.options.icon.options.iconSize = [70, 70];
+//         marker.options.icon.options.iconAnchor = [35, 35];
+//       } else {
+//         // Make marker smaller
+//         marker.options.icon.options.iconSize = [60, 60];
+//         marker.options.icon.options.iconAnchor = [30, 30];
+//       }
+//       marker.setIcon(marker.options.icon);
+//       marker.update();
+//     });
+//   });
+  
 
 // Role B
 
@@ -394,30 +423,26 @@ markerSobeys.bindPopup(templateSobeys);
 // Colabor : 45.56309100212611, -73.40419000185233
 // sysco : 45.56629351388272, -73.44302092642349
 // service alimentaire gordon : 45.565936445536785, -73.3991569497242
-// service alimentaire gordon Quebec : 46.824130693260116, -71.34847288015727
 // courchesne Larose : 45.626109350712994, -73.5525686558714
-// courchesne Larose : 45.53558555444583, -73.6449954965504
 
 let markerColabor = L.marker([45.56309100212611, -73.40419000185233], { icon: markerF }).addTo(map);
 let markerSysco = L.marker([45.56629351388272, -73.44302092642349], { icon: markerF }).addTo(map);
 let markerGordon1 = L.marker([45.565936445536785, -73.3991569497242], { icon: markerF }).addTo(map);
-let markerGordon2 = L.marker([46.824130693260116, -71.34847288015727], { icon: markerF }).addTo(map);
 let markerCourchesne1 = L.marker([45.626109350712994, -73.5525686558714], { icon: markerF }).addTo(map);
-let markerCourchesne2 = L.marker([45.53558555444583, -73.6449954965504], { icon: markerF }).addTo(map);
+
 
 const templateColabor = createPopupTemplate('Colabor', 'City', 'img/logo/ABC/Colabor-removebg-preview.png');
 const templateSysco = createPopupTemplate('Sysco', 'City', 'img/logo/ABC/Sysco-Logo-removebg-preview.png');
 const templateGordon1 = createPopupTemplate('Service Alimentaire Gordon (Montreal)', 'City', 'img/logo/ABC/Gordon_Service-alimentaire-removebg-preview.png');
-const templateGordon2 = createPopupTemplate('Service Alimentaire Gordon (Quebec)', 'City', 'img/logo/ABC/Gordon_Service-alimentaire-removebg-preview.png');
+
 const templateCourchesne1 = createPopupTemplate('Courchesne Larose (Montreal)', 'City', 'img/logo/ABC/Courschesne-Larose-removebg-preview.png');
-const templateCourchesne2 = createPopupTemplate('Courchesne Larose (Laval)', 'City', 'img/logo/ABC/Courschesne-Larose-removebg-preview.png');
+
 
 markerColabor.bindPopup(templateColabor);
 markerSysco.bindPopup(templateSysco);
 markerGordon1.bindPopup(templateGordon1);
-markerGordon2.bindPopup(templateGordon2);
 markerCourchesne1.bindPopup(templateCourchesne1);
-markerCourchesne2.bindPopup(templateCourchesne2);
+
 
 // Maturin : 45.544598202940534, -73.49200964418236
 // Fermes lufa : 45.50160373678727, -73.70900492671767
@@ -448,7 +473,7 @@ const templateCqcd = createPopupTemplate('CQCD', 'City', 'img/logo/ABC/CQCD-Logo
 markerAda.bindPopup(templateAda);
 markerCqcd.bindPopup(templateCqcd);
 
-const markersF = [markerSysco, markerGordon1, markerGordon2, markerCourchesne1, markerCourchesne2, markerMaturin, markerLufa, markerVoila, markerAda, markerCqcd, markerLoblaw, markerSobeys, markerMetro, markerColabor];
+const markersF = [markerSysco, markerGordon1, markerCourchesne1, markerMaturin, markerLufa, markerVoila, markerAda, markerCqcd, markerLoblaw, markerSobeys, markerMetro, markerColabor];
 
 let isMarkerVisibleF = true;
 let btnF = document.querySelector('[data-js-btnF]');
@@ -468,7 +493,7 @@ btnF.addEventListener('click', function () {
 const markersApprovisionnement = [markerTCPackaging, markerProAmpac, markerStJean, markerCarrousel, markerDuropac, markerTalthi, markerLelys, markerSteJulie, markerAlliance, markerAbeille, markerAxia, markerSnackdepot];
 
 
-const markersDevTech = [markerItegaA, markerEurofins, markerRoundup, markerMicom, markerItegaC, markerInteretec, markerUq, markerCiraig, markerAgeco, markerEllio, markerEeq, markerCartier, markerBraque, markerPigeon, markerSysco, markerGordon1, markerGordon2, markerCourchesne1, markerCourchesne2, markerMaturin, markerLufa, markerVoila, markerAda, markerCqcd, markerLoblaw, markerSobeys, markerMetro, markerColabor];
+const markersDevTech = [markerItegaA, markerEurofins, markerRoundup, markerMicom, markerItegaC, markerInteretec, markerUq, markerCiraig, markerAgeco, markerEllio, markerEeq, markerCartier, markerBraque, markerPigeon, markerSysco, markerGordon1, markerCourchesne1, markerMaturin, markerLufa, markerVoila, markerAda, markerCqcd, markerLoblaw, markerSobeys, markerMetro, markerColabor];
 
 
 let approIni = document.getElementById('appro-ini'),
@@ -514,3 +539,27 @@ devTechIni.addEventListener("click", function () {
     cpt++;
 });
 
+let markersTout = [markerProAmpac, markerStJean, markerTCPackaging, markerCarrousel, markerDuropac, markerTalthi, markerAlliance, markerLelys, markerSteJulie, markerAbeille, markerAxia, markerSnackdepot, markerItegaA, markerEurofins, markerRoundup, markerMicom, markerItegaC, markerInteretec, markerUq, markerCiraig, markerAgeco, markerEllio, markerEeq, markerCartier, markerBraque, markerPigeon, markerLoblaw, markerSobeys, markerMetro, markerColabor, markerSysco, markerGordon1, markerCourchesne1, markerMaturin, markerVoila, markerLufa, markerAda, markerCqcd];
+
+//38
+
+let divLogos = document.querySelectorAll('[data-js-flex-logo]');
+let tabLogos = [];
+for (let i = 0; i < divLogos.length; i++) {
+    let logos = divLogos[i].querySelectorAll('img');
+    for (let j = 0; j < logos.length; j++) {
+        tabLogos.push(logos[j]);
+    }
+}
+
+for (let i = 0; i < tabLogos.length; i++) {
+    //when mouseover, open popup
+    tabLogos[i].addEventListener('mouseover', function () {
+        markersTout[i].openPopup();
+    });
+
+    //when mouseout, close popup
+    tabLogos[i].addEventListener('mouseout', function () {
+        markersTout[i].closePopup();
+    });
+}
