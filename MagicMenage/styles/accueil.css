@@ -67,6 +67,7 @@
   
   .hero {
     background: url(/MagicMenage/images/carou.jpg);
+    /* background: #e8c3e5; */
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
