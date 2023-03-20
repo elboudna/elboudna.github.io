@@ -112,8 +112,113 @@ h2{
     color: red;
 }
 
+.form-controle {
+    display: block;
+    width: 95%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+/* media between 1365 and 1025 */
+
+@media screen and (min-width: 1025px) and (max-width: 1365px) {
+    .flexChambres img {
+      width: 150px;
+    }
+
+    #mainEstimation{
+        margin: 50px;
+        padding: 20px;
+    }
+    
+    .debutForm{
+        font-size: 13px;
+    }
+
+    .flexChambres p, .flexExtras p{
+        font-size: 12px;
+    }
+
+    .selected{
+        transform: scale(1.1);
+        padding: 5px;
+    }
+
+    .flexExtras img{
+        width: 80px;
+    }
+
+    #formulaire2 p {
+        font-size: 13px;
+    }
+
+    .titre{
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .form-controle {
+        width: 95%;
+        margin: 0;
+    }
+    
+  }
+
+/* media query for 1024 or less */
+@media screen and (max-width: 1024px) {
+    .flexChambres img {
+      width: 100px;
+    }
+
+    #mainEstimation{
+        margin: 50px;
+        padding: 20px;
+    }
+    
+    .debutForm{
+        font-size: 13px;
+    }
+
+    .flexChambres p, .flexExtras p{
+        font-size: 12px;
+    }
+
+    .selected{
+        transform: scale(1.1);
+        padding: 5px;
+    }
+
+    .flexExtras img{
+        width: 60px;
+    }
+
+    #formulaire2 p {
+        font-size: 13px;
+    }
+
+    .titre{
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .form-controle {
+        width: 95%;
+        margin: 0;
+    }
+    
+  }
+
+  
 /* media query for mobile view */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 660px) {
     .flexChambres img {
       width: 60px;
     }
@@ -128,7 +233,7 @@ h2{
     }
 
     .flexChambres p, .flexExtras p{
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .selected{
@@ -149,4 +254,105 @@ h2{
         margin-top: 30px;
     }
 
+    .form-controle {
+        width: 90%;
+    }
+
+    #mainEstimation{
+        margin: 15px;
+    }
+
+    #form p:first-of-type{
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
   }
+
+  /* less than 380px */
+    @media screen and (max-width: 450px) {
+        .flexChambres img {
+        width: 55px;
+        }
+
+        .flexChambres p, .flexExtras p{
+        font-size: 12px;
+        }
+    
+        #mainEstimation{
+            margin: 10px ;
+            /* padding: 20px; */
+        }
+        
+        .debutForm{
+            font-size: 13px;
+        }
+    
+       
+    
+        .selected{
+            transform: scale(1.1);
+            padding: 5px;
+        }
+
+        .flexChambres{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 4%;
+        }
+
+        .flexChambres > div{
+            flex-basis: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+    
+        .flexExtras{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 4%;
+        }
+
+        .flexExtras > div{
+            flex-basis: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .flexExtras img{
+            width: 50px;
+        }
+    
+        #formulaire2 p {
+            font-size: 13px;
+        }
+    
+        .titre{
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+    
+        .form-controle {
+            width: 90%;
+        }
+    
+        #mainEstimation{
+            margin: 15px;
+        }
+    
+        #form p:first-of-type{
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        
+    }
