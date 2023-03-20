@@ -85,6 +85,7 @@ h2{
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 30px;
     gap: 20px;
 }
 
@@ -126,6 +127,9 @@ h2{
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+#suivant {
+    width: 20%;
+}
 
 /* media between 1365 and 1025 */
 
@@ -267,10 +271,14 @@ h2{
         font-size: 15px;
         margin-bottom: 20px;
     }
+
+    #suivant {
+        width: 30%;
+    }
     
   }
 
-  /* less than 380px */
+  /* less than 450px */
     @media screen and (max-width: 450px) {
         .flexChambres img {
         width: 55px;
@@ -354,5 +362,32 @@ h2{
             font-size: 15px;
             margin-bottom: 20px;
         }
+
+        #suivant {
+            width: 40%;
+        }
+
+        #form{
+            padding: 10px;
+        }
+
+        #mainEstimation{
+            margin: 10px;
+            padding: 10px;
+        }
         
+        #recapitulatif > p{
+            font-size: 16px;
+        }
+
+        #recapitulatif li{
+            font-size: 14px;
+        }
+
+        .divBouton{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
     }
