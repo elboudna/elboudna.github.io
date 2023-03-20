@@ -3,21 +3,26 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.popup {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+.cat-conv{
+    background-color: #aa7479;
 }
 
-.popup img {
+.categorie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
     border-radius: 5px;
+    gap: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.popup-img {
     width: 100px;
 }
 
-.popup div {
-    margin: 1rem;
-}
 
 .popup-text {
     display: flex;
@@ -25,6 +30,20 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.leaflet-popup-content-wrapper {
+    max-width: 400px; /* set the maximum width of the popup content wrapper */
+  }
+  
+  .leaflet-popup-content {
+    width: 100%; /* set the width of the popup content to 100% of its parent */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
 
 .icone-map {
     width: 70px;
