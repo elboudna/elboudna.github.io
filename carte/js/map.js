@@ -497,9 +497,13 @@ const markersDevTech = [markerItegaA, markerEurofins, markerRoundup, markerMicom
 
 
 let approIni = document.getElementById('appro-ini'),
-    devTechIni = document.getElementById('dev-tech-ini');
+    devTechIni = document.getElementById('dev-tech-ini'),
+    divApprovMobile = document.getElementById('approvisionnement-mobile'),
+    divDevTechMobile = document.getElementById('developpement-technologique-mobile');
+
 
 let cpt = 0;
+let cptMobile = 0;
 
 approIni.addEventListener("click", function () {
     if (cpt === 0) {
@@ -520,6 +524,8 @@ approIni.addEventListener("click", function () {
     cpt++;
 });
 
+
+
 devTechIni.addEventListener("click", function () {
     if (cpt === 0) {
         markersApprovisionnement.forEach(marker => {
@@ -539,9 +545,48 @@ devTechIni.addEventListener("click", function () {
     cpt++;
 });
 
+divApprovMobile.addEventListener("click", function () {
+    if (cptMobile === 0) {
+        markersDevTech.forEach(marker => {
+            marker.remove();
+            marker.closePopup();
+        });
+    } else {
+        markersApprovisionnement.forEach(marker => {
+            marker.addTo(map);
+        });
+
+        markersDevTech.forEach(marker => {
+            marker.remove();
+            marker.closePopup();
+        });
+    }
+    cptMobile++;
+});
+
+divDevTechMobile.addEventListener("click", function () {
+    if (cptMobile === 0) {
+        markersApprovisionnement.forEach(marker => {
+            marker.remove();
+            marker.closePopup();
+        });
+    } else {
+        markersDevTech.forEach(marker => {
+            marker.addTo(map);
+        });
+
+        markersApprovisionnement.forEach(marker => {
+            marker.remove();
+            marker.closePopup();
+        });
+    }
+    cptMobile++;
+});
+
+
+
 let markersTout = [markerProAmpac, markerStJean, markerTCPackaging, markerCarrousel, markerDuropac, markerTalthi, markerAlliance, markerLelys, markerSteJulie, markerAbeille, markerAxia, markerSnackdepot, markerItegaA, markerEurofins, markerRoundup, markerMicom, markerItegaC, markerInteretec, markerUq, markerCiraig, markerAgeco, markerEllio, markerEeq, markerCartier, markerBraque, markerPigeon, markerLoblaw, markerSobeys, markerMetro, markerColabor, markerSysco, markerGordon1, markerCourchesne1, markerMaturin, markerVoila, markerLufa, markerAda, markerCqcd];
 
-//38
 
 let divLogos = document.querySelectorAll('[data-js-flex-logo]');
 let tabLogos = [];

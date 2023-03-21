@@ -53,7 +53,10 @@ body {
   
 
 .icone-map {
-    width: 70px;
+    max-width: 100%;
+    height: auto;
+
+    /* width: 70px; */
     cursor: pointer;
 }
 
@@ -209,7 +212,6 @@ body {
 
 .mini-div {
     border-radius: 10px;
-    /* border-radius: 50px; */
     margin: 20px;
     height: 84px;
 }
@@ -219,7 +221,6 @@ body {
     display: flex;
     align-items: center;
     border-bottom: solid .1px rgb(52, 52, 52);
-    /* border-radius: 55px; */
     border-radius: 10px;
     height: 84px;
 }
@@ -263,15 +264,11 @@ body {
     text-align: center;
     color: black;
     flex: 20%;
-    /* position: sticky;
-    top: 0;
-    z-index: 1; */
 }
 
 .flex-logo {
     margin-left: 15px;
     margin-right: 10px;
-    /* margin-bottom: 15px; */
     height: 118px;
     display: none;
     justify-content: flex-start;
@@ -306,6 +303,10 @@ body {
     
 }
 
+#legende-mobile{
+    display: none;
+}
+
 /* Change the width and height of the scrollbar */
 ::-webkit-scrollbar {
     width: 4px;
@@ -325,4 +326,163 @@ body {
 /* Change the color of the scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
+}
+
+
+/* media for screen smaller than 425 px */
+
+@media screen and (max-width: 425px) {
+    #map {
+        width: 100%;
+    }
+
+    #legende {
+        display: none;
+    }
+
+    #legende-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+
+    }
+
+    #legende-mobile>div {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .titre-legende {
+        font-size: 17px;
+        margin: 0;
+    }
+
+    .flex-legende-map{
+        flex-direction: column;
+    }
+
+    #approvisionnement-mobile {
+        height: 100%;
+        background-color: #19966a;
+        color: white;
+    }
+
+    #developpement-technologique-mobile{
+        height: 100%;
+        background-color: #e4a545;
+        color: white;
+    }
+}
+
+
+/* media for screen smaller than 1580 px */
+@media screen and (max-width: 1580px) {
+    .div-texte p {
+        font-size: 18px;
+    }
+
+    .flex-logo img{
+        width: 90px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .div-texte p {
+        font-size: 17px;
+    }
+
+    .flex-logo img{
+        width: 80px;
+    }
+
+    .titre-legende {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .div-texte p {
+        font-size: 15px;
+    }
+
+    .flex-logo img{
+        width: 75px;
+    }
+
+    #map {
+        width: 65%;
+    }
+
+    #legende {
+        width: 35%; 
+    }
+
+    #cat-F p {
+        font-size: 13px;
+    }
+
+    .titre-legende {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .div-texte p {
+        font-size: 14px;
+    }
+
+    .flex-logo img{
+        width: 60px;
+    }
+
+    #map {
+        width: 60%;
+    }
+    
+    #legende {
+        width: 40%; 
+    }
+
+    #cat-F p {
+        font-size: 11px;
+    }
+
+    .titre-legende {
+        font-size: 24px;
+    }
+
+    .flex-logo{
+        height: 100px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .div-texte p {
+        font-size: 12px;
+    }
+
+    .flex-logo img{
+        width: 55px;
+    }
+
+    #map {
+        width: 55%;
+    }
+
+    #legende {
+        width: 45%; 
+    }
+
+    #cat-F p {
+        font-size: 11px;
+    }
+
+    .titre-legende {
+        font-size: 22px;
+    }
 }

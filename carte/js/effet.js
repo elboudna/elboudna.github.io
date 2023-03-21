@@ -7,7 +7,9 @@ let divApprov = document.getElementById("approvisionnement"),
   titreLegende = document.querySelectorAll(".titre-legende"),
   divDevTech = document.getElementById("developpement-technologique"),
   devTechIni = document.getElementById('dev-tech-ini'),
-  devTechSec = document.getElementById('dev-tech-sec');
+  devTechSec = document.getElementById('dev-tech-sec'),
+  divApprovMobile = document.getElementById("approvisionnement-mobile"),
+  divDevTechMobile = document.getElementById("developpement-technologique-mobile");
 
 divApprov.addEventListener("click", function () {
   devTechIni.style.display = "flex";
@@ -57,6 +59,25 @@ divDevTech.addEventListener("click", function () {
 
 });
 
+
+// animation des divs verte et jaune pour mobile
+
+divApprovMobile.addEventListener("click", function () {
+  divApprovMobile.style.backgroundColor = "#e1e2e4";
+  divApprovMobile.style.transition = "all 1s ease-in-out";
+  divApprovMobile.style.color= "black";
+  divDevTechMobile.style.backgroundColor = "#e4a545";
+  divDevTechMobile.style.color= "white";
+});
+
+divDevTechMobile.addEventListener("click", function () {
+  divDevTechMobile.style.backgroundColor = "#e1e2e4";
+  divDevTechMobile.style.transition = "all 1s ease-in-out";
+  divDevTechMobile.style.color= "black";
+  divApprovMobile.style.backgroundColor = "#19966a";
+  divApprovMobile.style.color= "white";
+
+});
 
 // animation de l'ouverture des mini divs
 
@@ -113,7 +134,15 @@ function animateIconeMap() {
 animateIconeMap();
 
 function toggleMiniDiv(i) {
-  let height = 200;
+  let height, heightF;
+  const mediaQuery = window.matchMedia('(max-width: 1024px)');
+  if (mediaQuery.matches) {
+    height = 180;
+    heightF = 440;
+  } else {
+    height = 200;
+    heightF = 490;
+  }
   // Close any open miniDiv elements
   for (let j = 0; j < miniDiv.length; j++) {
     if (miniDiv[j].style.height != '0px' && j != i) {
@@ -159,7 +188,7 @@ function toggleMiniDiv(i) {
     }
     if (imgDownUp[i].src.match("down.png")) {
       imgDownUp[i].src = "img/icone/up.png";
-      animateMiniDivHeight(miniDiv[i], height + 490, 500);
+      animateMiniDivHeight(miniDiv[i], height + heightF, 500);
       // wait for the animation to finish before displaying the logo
       setTimeout(function () {
         for (let k = 9; k < flexLogo.length; k++) {
