@@ -106,10 +106,10 @@
   .hero h1 {
     color: white;
     position: absolute;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 900;
     height: 1em;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 50px;
     z-index: 2;
     margin: auto;
     text-align: center;
@@ -296,7 +296,22 @@ h2{
 }
 
 .cirle-responsive h2{
-  font-size: 60px;
+  font-size: 40px;
   color: white;
   font-weight: 900;
+  margin: 0;
+  
 }
+
+/* .hero h2 {
+  position: absolute;
+  color: white;
+  font-size: 1em;
+  font-weight: 900;
+  height: 1em;
+  z-index: 2;
+  margin: auto;
+  text-align: center;
+  opacity: 0;
+  animation: appear 2s 2.5s forwards;
+} */
