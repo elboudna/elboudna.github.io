@@ -8,6 +8,7 @@ let divApprov = document.getElementById("approvisionnement"),
   divDevTech = document.getElementById("developpement-technologique"),
   devTechIni = document.getElementById('dev-tech-ini'),
   devTechSec = document.getElementById('dev-tech-sec'),
+  legendeMobile = document.getElementById('legende-mobile'),
   divApprovMobile = document.getElementById("approvisionnement-mobile"),
   divDevTechMobile = document.getElementById("developpement-technologique-mobile"),
   iconeMapMobile = document.getElementById('icone-map-mobile'),
@@ -66,6 +67,7 @@ divDevTech.addEventListener("click", function () {
 // animation des divs verte et jaune pour mobile
 
 divApprovMobile.addEventListener("click", function () {
+  animateMiniDivHeight(legendeMobile, 80, 500);
   divApprovMobile.style.backgroundColor = "#e1e2e4";
   divApprovMobile.style.transition = "all 1s ease-in-out";
   divApprovMobile.style.color= "black";
@@ -78,6 +80,7 @@ divApprovMobile.addEventListener("click", function () {
 });
 
 divDevTechMobile.addEventListener("click", function () {
+  animateMiniDivHeight(legendeMobile, 80, 500);
   divDevTechMobile.style.backgroundColor = "#e1e2e4";
   divDevTechMobile.style.transition = "all 1s ease-in-out";
   divDevTechMobile.style.color= "black";
