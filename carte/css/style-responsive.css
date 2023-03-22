@@ -202,6 +202,7 @@
 
     .flex-legende-map{
         flex-direction: column;
+        margin: 3px;
     }
 
     #approvisionnement-mobile {
@@ -214,5 +215,9 @@
         height: 100%;
         background-color: #e4a545;
         color: white;
+    }
+    
+    #map {
+        height: 650px;
     }
 }
