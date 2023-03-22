@@ -236,12 +236,9 @@
         border-radius: 7px;
     }
 
-    
-
     .icone-map{
         width: 50px;
     }
-
 
     #icone-map-mobile{
         height: 80px;
@@ -250,7 +247,6 @@
         align-items: center;
         justify-content: center;
     }
-
 
     #icone-map-mobile p{
         font-size: 12px;
@@ -270,11 +266,106 @@
         white-space: nowrap;
     }
 
-    #appro-sec-mobile::-webkit-scrollbar, #dev-tech-sec-mobile::-webkit-scrollbar {
-        display: none;
+}
+
+/* media for screen smaller than 425 px */
+
+@media screen and (max-width: 425px) {
+    .titre-legende {
+        font-size: 14px;
     }
-    
-    #icone-map-mobile::-webkit-scrollbar, #appro-sec-mobile::-webkit-scrollbar, #dev-tech-sec-mobile::-webkit-scrollbar {
-        display: none;
+
+    .div-icone-mobile{
+        width: 140px;
+        height: 60px;
     }
+
+    #icone-map-mobile{
+        height: 70px;
+    }
+
+    #icone-map-mobile p{
+        font-size: 11px;
+    }
+
+    #appro-sec-mobile, #dev-tech-sec-mobile{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .icone-map{
+        width: 45px;
+    }
+
+}
+
+/* media for screen smaller than 375 px */
+
+@media screen and (max-width: 375px) {
+    .titre-legende {
+        font-size: 13px;
+    }
+
+    .div-icone-mobile{
+        width: 135px;
+        height: 60px;
+    }
+
+    #icone-map-mobile{
+        height: 65px;
+    }
+
+    #icone-map-mobile p{
+        font-size: 10px;
+    }
+
+    #appro-sec-mobile, #dev-tech-sec-mobile{
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .icone-map{
+        width: 40px;
+    }
+
+}
+
+/* media for screen smaller than 320 px */
+
+@media screen and (max-width: 320px) {
+    .titre-legende {
+        font-size: 12px;
+    }
+
+    .div-icone-mobile{
+        width: 120px;
+        height: 55px;
+    }
+
+    #icone-map-mobile{
+        height: 60px;
+    }
+
+    #icone-map-mobile p{
+        font-size: 9px;
+    }
+
+    #appro-sec-mobile, #dev-tech-sec-mobile{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .icone-map{
+        width: 35px;
+    }
+
+}
+
+
+#appro-sec-mobile::-webkit-scrollbar, #dev-tech-sec-mobile::-webkit-scrollbar {
+    display: none;
+}
+
+#icone-map-mobile::-webkit-scrollbar, #appro-sec-mobile::-webkit-scrollbar, #dev-tech-sec-mobile::-webkit-scrollbar {
+    display: none;
 }
