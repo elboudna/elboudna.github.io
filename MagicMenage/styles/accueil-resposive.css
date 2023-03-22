@@ -92,9 +92,6 @@
         font-size: 20px;
     }
 
-   
-    
-
     #about {
         margin-top: 50px;
         padding: 0;
@@ -184,6 +181,10 @@
     div.drop-container:before,
     div.drop-container:after {
         top: 60%;
+    }
+
+    .hero-text{
+        margin-top: 200px;
     }
 }
 
