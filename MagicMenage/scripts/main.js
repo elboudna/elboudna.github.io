@@ -227,88 +227,98 @@ window.onload = function () {
 
         observer.observe(flexAnimation);
 
-        let dots = document.querySelectorAll('.dot-container span');
-        let divs = document.querySelectorAll('.flexCustomer > div');
-        let currentDiv = 0, startXClient = 0, endXClient = 0;
 
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                dots[currentDiv].classList.remove('active');
-                divs[currentDiv].style.display = 'none';
+        const mediaQuery960 = window.matchMedia('(max-width: 960px)');
+        const mediaQuery450 = window.matchMedia('(max-width: 450px)');
 
-                currentDiv = index;
-                dots[currentDiv].classList.add('active');
-                divs[currentDiv].style.display = 'flex';
-            });
-        });
+        if (mediaQuery960.matches) {
 
-        divs.forEach((div, index) => {
-            div.addEventListener('touchstart', (event) => {
-                startXClient = event.touches[0].clientX;
-            });
 
-            div.addEventListener('touchend', (event) => {
-                endXClient = event.changedTouches[0].clientX;
+            let dots = document.querySelectorAll('.dot-container span');
+            let divs = document.querySelectorAll('.flexCustomer > div');
+            let currentDiv = 0, startXClient = 0, endXClient = 0;
 
-                if (startXClient > endXClient) {
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
                     dots[currentDiv].classList.remove('active');
                     divs[currentDiv].style.display = 'none';
 
-                    currentDiv = (currentDiv + 1) % divs.length;
+                    currentDiv = index;
                     dots[currentDiv].classList.add('active');
                     divs[currentDiv].style.display = 'flex';
-                }
-                else if (startXClient < endXClient) {
-                    dots[currentDiv].classList.remove('active');
-                    divs[currentDiv].style.display = 'none';
-
-                    currentDiv = (currentDiv - 1 + divs.length) % divs.length;
-                    dots[currentDiv].classList.add('active');
-                    divs[currentDiv].style.display = 'flex';
-                }
+                });
             });
-        });
 
+            divs.forEach((div, index) => {
+                div.addEventListener('touchstart', (event) => {
+                    startXClient = event.touches[0].clientX;
+                });
 
+                div.addEventListener('touchend', (event) => {
+                    endXClient = event.changedTouches[0].clientX;
 
+                    if (startXClient > endXClient) {
+                        dots[currentDiv].classList.remove('active');
+                        divs[currentDiv].style.display = 'none';
 
-        let dotService = document.querySelectorAll('.dot span');
-        let services = document.querySelectorAll('.flexServices > div');
-        let index = 0, startX = 0, endX = 0;
+                        currentDiv = (currentDiv + 1) % divs.length;
+                        dots[currentDiv].classList.add('active');
+                        divs[currentDiv].style.display = 'flex';
+                    }
+                    else if (startXClient < endXClient) {
+                        dots[currentDiv].classList.remove('active');
+                        divs[currentDiv].style.display = 'none';
 
-        for (let i = 0; i < dotService.length; i++) {
-            dotService[i].addEventListener('click', () => {
-                dotService[index].classList.remove('active');
-                services[index].style.display = 'none';
-                index = i;
-                dotService[index].classList.add('active');
-                services[index].style.display = 'flex';
+                        currentDiv = (currentDiv - 1 + divs.length) % divs.length;
+                        dots[currentDiv].classList.add('active');
+                        divs[currentDiv].style.display = 'flex';
+                    }
+                });
             });
         }
 
-        for (let i = 0; i < services.length; i++) {
-            services[i].addEventListener('touchstart', (event) => {
-                startX = event.touches[0].clientX;
-            });
 
-            services[i].addEventListener('touchend', (event) => {
-                endX = event.changedTouches[0].clientX;
 
-                if (startX > endX) {
+        if (mediaQuery450.matches) {
+
+            let dotService = document.querySelectorAll('.dot span');
+            let services = document.querySelectorAll('.flexServices > div');
+            let index = 0, startX = 0, endX = 0;
+
+            for (let i = 0; i < dotService.length; i++) {
+                dotService[i].addEventListener('click', () => {
                     dotService[index].classList.remove('active');
                     services[index].style.display = 'none';
-                    index = (index + 1) % services.length;
+                    index = i;
                     dotService[index].classList.add('active');
                     services[index].style.display = 'flex';
-                }
-                else if (startX < endX) {
-                    dotService[index].classList.remove('active');
-                    services[index].style.display = 'none';
-                    index = (index - 1 + services.length) % services.length;
-                    dotService[index].classList.add('active');
-                    services[index].style.display = 'flex';
-                }
-            });
+                });
+            }
+
+            for (let i = 0; i < services.length; i++) {
+                services[i].addEventListener('touchstart', (event) => {
+                    startX = event.touches[0].clientX;
+                });
+
+                services[i].addEventListener('touchend', (event) => {
+                    endX = event.changedTouches[0].clientX;
+
+                    if (startX > endX) {
+                        dotService[index].classList.remove('active');
+                        services[index].style.display = 'none';
+                        index = (index + 1) % services.length;
+                        dotService[index].classList.add('active');
+                        services[index].style.display = 'flex';
+                    }
+                    else if (startX < endX) {
+                        dotService[index].classList.remove('active');
+                        services[index].style.display = 'none';
+                        index = (index - 1 + services.length) % services.length;
+                        dotService[index].classList.add('active');
+                        services[index].style.display = 'flex';
+                    }
+                });
+            }
         }
     }
 }    
