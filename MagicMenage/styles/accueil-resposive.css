@@ -92,12 +92,7 @@
         font-size: 20px;
     }
 
-    /* h2 {
-        font-size: 27px;
-        margin-bottom: 0px;
-        margin-top: 0px;
-    } */
-
+   
     
 
     #about {
@@ -242,7 +237,7 @@
         align-items: center;
         justify-content: center;
         height: 800px;
-        /* position:sticky; */
+        position:sticky;
     }
 
     .hero-description{
