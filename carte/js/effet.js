@@ -9,7 +9,10 @@ let divApprov = document.getElementById("approvisionnement"),
   devTechIni = document.getElementById('dev-tech-ini'),
   devTechSec = document.getElementById('dev-tech-sec'),
   divApprovMobile = document.getElementById("approvisionnement-mobile"),
-  divDevTechMobile = document.getElementById("developpement-technologique-mobile");
+  divDevTechMobile = document.getElementById("developpement-technologique-mobile"),
+  iconeMapMobile = document.getElementById('icone-map-mobile'),
+  approSecMobile = document.getElementById('appro-sec-mobile'),
+  devTechSecMobile = document.getElementById('dev-tech-sec-mobile');
 
 divApprov.addEventListener("click", function () {
   devTechIni.style.display = "flex";
@@ -68,6 +71,10 @@ divApprovMobile.addEventListener("click", function () {
   divApprovMobile.style.color= "black";
   divDevTechMobile.style.backgroundColor = "#e4a545";
   divDevTechMobile.style.color= "white";
+  iconeMapMobile.style.display = "flex";
+  approSecMobile.style.display = "flex";
+  devTechSecMobile.style.display = "none";
+
 });
 
 divDevTechMobile.addEventListener("click", function () {
@@ -76,6 +83,9 @@ divDevTechMobile.addEventListener("click", function () {
   divDevTechMobile.style.color= "black";
   divApprovMobile.style.backgroundColor = "#19966a";
   divApprovMobile.style.color= "white";
+  iconeMapMobile.style.display = "flex";
+  approSecMobile.style.display = "none";
+  devTechSecMobile.style.display = "flex";
 
 });
 
@@ -112,7 +122,7 @@ function animateMiniDivHeight(element, height, duration) {
 }
 
 
-let iconeMap = document.querySelectorAll('.icone-map')
+let iconeMap = document.querySelectorAll('[data-js-icone-map]')
 
 // animate the icone with zoom 1.1 then 0.9 at the load of the page
 
@@ -135,8 +145,8 @@ animateIconeMap();
 
 function toggleMiniDiv(i) {
   let height, heightF;
-  const mediaQuery = window.matchMedia('(max-width: 1024px)');
-  if (mediaQuery.matches) {
+  const mediaQuery1024 = window.matchMedia('(max-width: 1024px)');
+  if (mediaQuery1024.matches) {
     height = 180;
     heightF = 440;
   } else {

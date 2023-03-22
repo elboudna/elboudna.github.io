@@ -66,20 +66,22 @@ markerStJean.bindPopup(templateStJean);
 const markers1 = [markerTCPackaging, markerProAmpac, markerStJean];
 
 let isMarkerVisible1 = true;
-let btn1 = document.querySelector('[data-js-btn1]');
+let btn1 = document.querySelectorAll('[data-js-btn1]');
 
-btn1.addEventListener('click', function () {
-    isMarkerVisible1 = !isMarkerVisible1;
+for (let i = 0; i < btn1.length; i++) {
+    btn1[i].addEventListener('click', function () {
+        isMarkerVisible1 = !isMarkerVisible1;
 
-    markers1.forEach(marker => {
-        if (isMarkerVisible1) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-            marker.closePopup();
-        }
+        markers1.forEach(marker => {
+            if (isMarkerVisible1) {
+                marker.addTo(map);
+            } else {
+                marker.remove();
+                marker.closePopup();
+            }
+        });
     });
-});
+}
 
 // btn1.addEventListener('click', function () {
 //     // remove all markers from the map
@@ -118,22 +120,22 @@ markerTalthi.bindPopup(templateTalthi);
 const markers2 = [markerCarrousel, markerDuropac, markerTalthi];
 
 let isMarkerVisible2 = true;
-let btn2 = document.querySelector('[data-js-btn2]');
+let btn2 = document.querySelectorAll('[data-js-btn2]');
 
-btn2.addEventListener('click', function () {
-    isMarkerVisible2 = !isMarkerVisible2;
+for (let i = 0; i < btn2.length; i++) {
+    btn2[i].addEventListener('click', function () {
+        isMarkerVisible2 = !isMarkerVisible2;
 
-    markers2.forEach(marker => {
-        if (isMarkerVisible2) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-            marker.closePopup();
-        }
+        markers2.forEach(marker => {
+            if (isMarkerVisible2) {
+                marker.addTo(map);
+            } else {
+                marker.remove();
+                marker.closePopup();
+            }
+        });
     });
-});
-
-
+}
 
 // ROLE 3
 
@@ -158,19 +160,21 @@ markerAlliance.bindPopup(templateAlliance);
 const markers3 = [markerLelys, markerSteJulie, markerAlliance];
 
 let isMarkerVisible3 = true;
-let btn3 = document.querySelector('[data-js-btn3]');
-btn3.addEventListener('click', function () {
-    isMarkerVisible3 = !isMarkerVisible3;
+let btn3 = document.querySelectorAll('[data-js-btn3]');
+for (let i = 0; i < btn3.length; i++) {
+    btn3[i].addEventListener('click', function () {
+        isMarkerVisible3 = !isMarkerVisible3;
 
-    markers3.forEach(marker => {
-        if (isMarkerVisible3) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-            marker.closePopup();
-        }
+        markers3.forEach(marker => {
+            if (isMarkerVisible3) {
+                marker.addTo(map);
+            } else {
+                marker.remove();
+                marker.closePopup();
+            }
+        });
     });
-});
+}
 
 // ROLE 4
 
@@ -193,19 +197,21 @@ markerSnackdepot.bindPopup(templateSnackdepot);
 const markers4 = [markerAbeille, markerAxia, markerSnackdepot];
 
 let isMarkerVisible4 = true;
-let btn4 = document.querySelector('[data-js-btn4]');
-btn4.addEventListener('click', function () {
-    isMarkerVisible4 = !isMarkerVisible4;
+let btn4 = document.querySelectorAll('[data-js-btn4]');
+for (let i = 0; i < btn4.length; i++) {
+    btn4[i].addEventListener('click', function () {
+        isMarkerVisible4 = !isMarkerVisible4;
 
-    markers4.forEach(marker => {
-        if (isMarkerVisible4) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-            marker.closePopup();
-        }
+        markers4.forEach(marker => {
+            if (isMarkerVisible4) {
+                marker.addTo(map);
+            } else {
+                marker.remove();
+                marker.closePopup();
+            }
+        });
     });
-});
+}
 
 
 
@@ -222,20 +228,22 @@ markerItegaA.bindPopup(templateItegaA);
 const markersA = [markerItegaA];
 
 let isMarkerVisibleA = true;
-let btnA = document.querySelector('[data-js-btnA]');
+let btnA = document.querySelectorAll('[data-js-btnA]');
 
-btnA.addEventListener('click', function () {
-    isMarkerVisibleA = !isMarkerVisibleA;
+for (let i = 0; i < btnA.length; i++) {
+    btnA[i].addEventListener('click', function () {
+        isMarkerVisibleA = !isMarkerVisibleA;
 
-    markersA.forEach(marker => {
-        if (isMarkerVisibleA) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-            marker.closePopup();
-        }
+        markersA.forEach(marker => {
+            if (isMarkerVisibleA) {
+                marker.addTo(map);
+            } else {
+                marker.remove();
+                marker.closePopup();
+            }
+        });
     });
-});
+}
 
 // btn1.addEventListener('click', function () {
 //     isMarkerVisible1 = !isMarkerVisible1;
@@ -277,19 +285,21 @@ markerMicom.bindPopup(templateMicom);
 const markersB = [markerEurofins, markerRoundup, markerMicom];
 
 let isMarkerVisibleB = true;
-let btnB = document.querySelector('[data-js-btnB]');
-btnB.addEventListener('click', function () {
-    isMarkerVisibleB = !isMarkerVisibleB;
+let btnB = document.querySelectorAll('[data-js-btnB]');
+for (let i = 0; i < btnB.length; i++) {
+    btnB[i].addEventListener('click', function () {
+        isMarkerVisibleB = !isMarkerVisibleB;
 
-    markersB.forEach(marker => {
-        if (isMarkerVisibleB) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-            marker.closePopup();
-        }
+        markersB.forEach(marker => {
+            if (isMarkerVisibleB) {
+                marker.addTo(map);
+            } else {
+                marker.remove();
+                marker.closePopup();
+            }
+        });
     });
-});
+}
 
 // Role C
 
@@ -313,19 +323,22 @@ markerUq.bindPopup(templateUq);
 const markersC = [markerItegaC, markerInteretec, markerUq];
 
 let isMarkerVisibleC = true;
-let btnC = document.querySelector('[data-js-btnC]');
-btnC.addEventListener('click', function () {
-    isMarkerVisibleC = !isMarkerVisibleC;
+let btnC = document.querySelectorAll('[data-js-btnC]');
 
-    markersC.forEach(marker => {
-        if (isMarkerVisibleC) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-            marker.closePopup();
-        }
+for (let i = 0; i < btnC.length; i++) {
+    btnC[i].addEventListener('click', function () {
+        isMarkerVisibleC = !isMarkerVisibleC;
+
+        markersC.forEach(marker => {
+            if (isMarkerVisibleC) {
+                marker.addTo(map);
+            } else {
+                marker.remove();
+                marker.closePopup();
+            }
+        });
     });
-});
+}
 
 // Role D
 
@@ -348,20 +361,22 @@ markerEllio.bindPopup(templateEllio);
 const markersD = [markerCiraig, markerAgeco, markerEllio];
 
 let isMarkerVisibleD = true;
-let btnD = document.querySelector('[data-js-btnD]');
+let btnD = document.querySelectorAll('[data-js-btnD]');
 
-btnD.addEventListener('click', function () {
-    isMarkerVisibleD = !isMarkerVisibleD;
+for (let i = 0; i < btnD.length; i++) {
+    btnD[i].addEventListener('click', function () {
+        isMarkerVisibleD = !isMarkerVisibleD;
 
-    markersD.forEach(marker => {
-        if (isMarkerVisibleD) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-            marker.closePopup();
-        }
+        markersD.forEach(marker => {
+            if (isMarkerVisibleD) {
+                marker.addTo(map);
+            } else {
+                marker.remove();
+                marker.closePopup();
+            }
+        });
     });
-});
+}
 
 // Role E
 
@@ -388,19 +403,21 @@ markerPigeon.bindPopup(templatePigeon);
 const markersE = [markerEeq, markerCartier, markerBraque, markerPigeon];
 
 let isMarkerVisibleE = true;
-let btnE = document.querySelector('[data-js-btnE]');
-btnE.addEventListener('click', function () {
-    isMarkerVisibleE = !isMarkerVisibleE;
+let btnE = document.querySelectorAll('[data-js-btnE]');
+for (let i = 0; i < btnE.length; i++) {
+    btnE[i].addEventListener('click', function () {
+        isMarkerVisibleE = !isMarkerVisibleE;
 
-    markersE.forEach(marker => {
-        if (isMarkerVisibleE) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-            marker.closePopup();
-        }
+        markersE.forEach(marker => {
+            if (isMarkerVisibleE) {
+                marker.addTo(map);
+            } else {
+                marker.remove();
+                marker.closePopup();
+            }
+        });
     });
-});
+}
 
 // Role F
 
@@ -476,19 +493,23 @@ markerCqcd.bindPopup(templateCqcd);
 const markersF = [markerSysco, markerGordon1, markerCourchesne1, markerMaturin, markerLufa, markerVoila, markerAda, markerCqcd, markerLoblaw, markerSobeys, markerMetro, markerColabor];
 
 let isMarkerVisibleF = true;
-let btnF = document.querySelector('[data-js-btnF]');
+let btnF = document.querySelectorAll('[data-js-btnF]');
 
-btnF.addEventListener('click', function () {
-    isMarkerVisibleF = !isMarkerVisibleF;
-    markersF.forEach(marker => {
+for (let i = 0; i < btnF.length; i++) {
+    btnF[i].addEventListener('click', function (e) {
         if (isMarkerVisibleF) {
-            marker.addTo(map);
+            for (let i = 0; i < markersF.length; i++) {
+                map.removeLayer(markersF[i]);
+            }
+            isMarkerVisibleF = false;
         } else {
-            marker.remove();
-            marker.closePopup();
+            for (let i = 0; i < markersF.length; i++) {
+                map.addLayer(markersF[i]);
+            }
+            isMarkerVisibleF = true;
         }
-    });
-});
+    })
+}
 
 const markersApprovisionnement = [markerTCPackaging, markerProAmpac, markerStJean, markerCarrousel, markerDuropac, markerTalthi, markerLelys, markerSteJulie, markerAlliance, markerAbeille, markerAxia, markerSnackdepot];
 
