@@ -170,7 +170,7 @@
 
 /* media for screen smaller than 425 px */
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 550px) {
     #map {
         width: 100%;
     }
