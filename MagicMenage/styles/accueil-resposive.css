@@ -237,8 +237,8 @@
         align-items: center;
         justify-content: center;
         height: 800px;
-        position:static;
-        z-index: 0;
+        position:sticky;
+        z-index: -100;
     }
 
     .hero-description{
