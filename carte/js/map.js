@@ -30,16 +30,21 @@ let markerG = createIcon('img/iconeMap/mapG.png');
 let markerH = createIcon('img/iconeMap/mapH.png');
 let markerI = createIcon('img/iconeMap/mapI.png');
 
-function createPopupTemplate(cat ,logo, name, adresse) {
+function createPopupTemplate(cat, icone, name, logo, adresse, ville, urlsiteweb, siteweb) {
     return `
         <div class='${cat} categorie'>
+            <img src="img/iconeMapB/bmap${icone}.png" alt="categorie">
             <h3>${name}</h3>
         </div>
-        <div>
-            <img src="${logo}" alt="logo" width="100px">
-        </div>
-        <div>
-            <p>${adresse}</p>
+        <div class='flex-adresse-logo'>
+            <div>
+                <p>${adresse}</p>
+                <p>${ville}</p>
+                <a href='${urlsiteweb}'>${siteweb}</a>
+            </div>
+            <div>
+                <img src="${logo}" alt="logo" width="100px">
+            </div>
         </div>
     `;
 }
@@ -55,9 +60,9 @@ let markerTCPackaging = L.marker([45.62306097667415, -73.58284014432547], { icon
 let markerProAmpac = L.marker([45.701837574721466, -73.75424020449023], { icon: marker1 }).addTo(map);
 let markerStJean = L.marker([45.36143507347949, -73.28754397104049], { icon: marker1 }).addTo(map);
 
-const templateTCPackaging = createPopupTemplate('cat-conv','img/logo/123/TC-removebg-preview.png', 'TC Packaging', '2525 av aird');
-const templateProAmpac = createPopupTemplate('cat-conv', 'ProAmpac', 'Montréal', 'img/logo/123/ProAmpac-removebg-preview.png');
-const templateStJean = createPopupTemplate('cat-conv', 'St Jean', 'Montréal', 'img/logo/123/Emballage_st-jean.png');
+const templateTCPackaging = createPopupTemplate('div-convertisseurs', '1', 'TC Packaging', 'img/logo/123/TC-removebg-preview.png', '2525 av aird', "Montreal H1V 3Z9", "https://tctranscontinental.com/en-us/packaging", 'tctranscontinental.com');
+const templateProAmpac = createPopupTemplate('div-convertisseurs', '1', 'ProAmpac', 'img/logo/123/ProAmpac-removebg-preview.png', '2525 av aird', "Montreal H1V 3Z9", "https://www.proampac.com/", 'proampac.com');
+const templateStJean = createPopupTemplate('div-convertisseurs', '1', 'St Jean', 'img/logo/123/Emballage_st-jean.png', '2525 av aird', "Montreal H1V 3Z9", "https://www.sjpack.com/fr/", 'sjpack.com');
 
 markerTCPackaging.bindPopup(templateTCPackaging);
 markerProAmpac.bindPopup(templateProAmpac);

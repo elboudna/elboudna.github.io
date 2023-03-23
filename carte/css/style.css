@@ -4,20 +4,28 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.cat-conv{
-    background-color: #aa7479;
-}
 
 .categorie{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 160px;
-    border-radius: 5px;
+    justify-content: flex-start;
+    width: 90%;
+    margin-top: 10px;
+    border-radius: 10px;
     gap: 5px;
     color: white;
     font-size: 12px;
+}
+
+.categorie img{
+    width: 40px;
+    height: 40px;
+    padding-right: 5px;
+    border-right: white solid 1px;
+}
+
+.categorie * {
+    margin-left: 5px;
 }
 
 .popup-img {
@@ -33,7 +41,14 @@ body {
 }
 
 .leaflet-popup-content-wrapper {
-    max-width: 400px; 
+    width: 300px; 
+    border-radius: 20px !important ;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
   }
   
   .leaflet-popup-content {
@@ -42,22 +57,28 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+  }
+
+  .leaflet-popup-content {
+    margin: 0 !important;
+  }
+  
+  .flex-adresse-logo{
+    height: 120px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .leaflet-popup-content > div{
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
   }
   
 
 .icone-map {
     max-width: 100%;
     height: auto;
-
-    /* width: 70px; */
     cursor: pointer;
 }
 
