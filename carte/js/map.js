@@ -40,7 +40,7 @@ function createPopupTemplate(cat, icone, name, logo, adresse, ville, urlsiteweb,
             <div>
                 <p>${adresse}</p>
                 <p>${ville}</p>
-                <a href='${urlsiteweb}'>${siteweb}</a>
+                <a target="_blank" href='${urlsiteweb}'>${siteweb}</a>
             </div>
             <div>
                 <img src="${logo}" alt="logo" width="100px">
