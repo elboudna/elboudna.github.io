@@ -60,9 +60,9 @@ let markerTCPackaging = L.marker([45.62306097667415, -73.58284014432547], { icon
 let markerProAmpac = L.marker([45.701837574721466, -73.75424020449023], { icon: marker1 }).addTo(map);
 let markerStJean = L.marker([45.36143507347949, -73.28754397104049], { icon: marker1 }).addTo(map);
 
-const templateTCPackaging = createPopupTemplate('div-convertisseurs', '1', 'TC Packaging', 'img/logo/123/TC-removebg-preview.png', '2525 av aird', "Montreal H1V 3Z9", "https://tctranscontinental.com/en-us/packaging", 'tctranscontinental.com');
-const templateProAmpac = createPopupTemplate('div-convertisseurs', '1', 'ProAmpac', 'img/logo/123/ProAmpac-removebg-preview.png', '2525 av aird', "Montreal H1V 3Z9", "https://www.proampac.com/", 'proampac.com');
-const templateStJean = createPopupTemplate('div-convertisseurs', '1', 'St Jean', 'img/logo/123/Emballage_st-jean.png', '2525 av aird', "Montreal H1V 3Z9", "https://www.sjpack.com/fr/", 'sjpack.com');
+const templateTCPackaging = createPopupTemplate('div-convertisseurs', '1', 'TC Packaging', 'img/logo/123/TC-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://tctranscontinental.com/en-us/packaging", 'tctranscontinental.com');
+const templateProAmpac = createPopupTemplate('div-convertisseurs', '1', 'ProAmpac', 'img/logo/123/ProAmpac-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.proampac.com/", 'proampac.com');
+const templateStJean = createPopupTemplate('div-convertisseurs', '1', 'St Jean', 'img/logo/123/Emballage_st-jean.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.sjpack.com/fr/", 'sjpack.com');
 
 markerTCPackaging.bindPopup(templateTCPackaging);
 markerProAmpac.bindPopup(templateProAmpac);
@@ -113,9 +113,9 @@ let markerCarrousel = L.marker([45.56961302127696, -73.425589], { icon: marker2 
 let markerDuropac = L.marker([45.37091533159878, -73.52275776932923], { icon: marker2 }).addTo(map);
 let markerTalthi = L.marker([45.62733599060354, -72.99022332883959], { icon: marker2 }).addTo(map);
 
-const templateCarrousel = createPopupTemplate('cat-gros', 'Carrousel', 'Montréal', 'img/logo/123/Carrousel-removebg-preview.png');
-const templateDuropac = createPopupTemplate('cat-gros', 'Duropac', 'Montréal', 'img/logo/123/Duropac-removebg-preview.png');
-const templateTalthi = createPopupTemplate('cat-gros', 'Talthi', 'Montréal', 'img/logo/123/Talthi-removebg-preview.png');
+const templateCarrousel = createPopupTemplate('div-grossistes', '2', 'Carrousel', 'img/logo/123/Carrousel-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.carrousel.ca", 'carrousel.ca');
+const templateDuropac = createPopupTemplate('div-grossistes', '2', 'Duropac', 'img/logo/123/Duropac-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.duropac.com", 'duropac.com');
+const templateTalthi = createPopupTemplate('div-grossistes', '2', 'Talthi', 'img/logo/123/Talthi-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.talthi.ca", 'talthi.com');
 
 
 markerCarrousel.bindPopup(templateCarrousel);
@@ -153,9 +153,9 @@ let markerLelys = L.marker([45.59409038967441, -73.73784582884048], { icon: mark
 let markerSteJulie = L.marker([45.57995245855943, -73.32304855613708], { icon: marker3 }).addTo(map);
 let markerAlliance = L.marker([45.75411814001102, -73.4472546171883], { icon: marker3 }).addTo(map);
 
-const templateLelys = createPopupTemplate('Lelys', 'Montréal', 'img/logo/123/Lelys-removebg-preview.png');
-const templateSteJulie = createPopupTemplate('Ste-Julie', 'Montréal', 'img/logo/123/Imprimerie_Ste-Julie-removebg-preview.png');
-const templateAlliance = createPopupTemplate('Alliance', 'Montréal', 'img/logo/123/Alliance-Etiquette_et_solutions_emballage-removebg-preview.png');
+const templateLelys = createPopupTemplate('div-impression', '3', 'Lelys', 'img/logo/123/Lelys-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.lelys.com", 'lelys.com');
+const templateSteJulie = createPopupTemplate('div-impression', '3', 'Ste Julie', 'img/logo/123/Imprimerie_Ste-Julie-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.impsj.com", 'impsj.com');
+const templateAlliance = createPopupTemplate('div-impression', '3', 'Alliance', 'img/logo/123/Alliance-Etiquette_et_solutions_emballage-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.allianceinc.ca", 'allianceinc.ca');
 
 markerLelys.bindPopup(templateLelys);
 markerSteJulie.bindPopup(templateSteJulie);
@@ -191,9 +191,9 @@ let markerAbeille = L.marker([45.6143100245516, -73.5911116443582], { icon: mark
 let markerAxia = L.marker([45.60529091818758, -73.60249939155307], { icon: marker4 }).addTo(map);
 let markerSnackdepot = L.marker([46.868472634771464, -71.1820438171603], { icon: marker4 }).addTo(map);
 
-const templateAbeille = createPopupTemplate('Abeille', 'Montréal', 'img/logo/123/Abeilles_busy_bees-removebg-preview.png');
-const templateAxia = createPopupTemplate('Axia', 'Montréal', 'img/logo/123/Axia-removebg-preview.png');
-const templateSnackdepot = createPopupTemplate('Snackdepot', 'Montréal', 'img/logo/123/Snackdepot-removebg-preview.png');
+const templateAbeille = createPopupTemplate('div-co-emballage', '4', 'Abeille', 'img/logo/123/Abeilles_busy_bees-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.abusy.ca", 'abusy.ca');
+const templateAxia = createPopupTemplate('div-co-emballage', '4', 'Axia', 'img/logo/123/Axia-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.axiaservices.com/emballage-1", 'axiaservices.com');
+const templateSnackdepot = createPopupTemplate('div-co-emballage', '4', 'Snackdepot', 'img/logo/123/Snack_depot-removebg-preview.png', '2525 av mtl', "Montreal H1V 3Z9", "https://www.snackdepot.ca", 'ssnackdepot.ca');
 
 markerAbeille.bindPopup(templateAbeille);
 markerAxia.bindPopup(templateAxia);
