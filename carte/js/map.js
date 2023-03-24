@@ -269,8 +269,8 @@ let markerInteretec = L.marker([45.612467111952164, -73.51557249069322], { icon:
 let markerUq = L.marker([46.813253611872724, -71.22240035206579], { icon: markerC }).addTo(map);
 
 const templateItegaC = createPopupTemplate('div-innocuite', 'C', 'ITEGA', 'img/logo/ABC/ITEGA_CMYK_M-removebg-preview.png', '6220, rue Sherbrooke Est', "Montréal (Québec)&nbsp; H1N 1C1", "https://www.itega.ca", 'itega.ca');
-const templateInteretec = createPopupTemplate('div-innocuite', 'C', 'Intertek', 'img/logo/ABC/Interetec_Logo-removebg-preview.png', '2561 av Georges-V', "Montréal-Est (Québec)&nbsp; H1L 6S4", "https://www.intertek.com/canada/", 'intertek.com');
-const templateUq = createPopupTemplate('div-innocuite', 'C', 'Université du Québec', 'img/logo/ABC/UQAM_Logo-removebg-preview.png', '475 rue du Parvis', "Québec (Québec)&nbsp; G1K 9H7", "https://reseau.uquebec.ca/fr", 'reseau.uquebec.ca');
+const templateInteretec = createPopupTemplate('div-innocuite', 'C', 'Intertek', 'img/logo/ABC/Intertek-Logo-removebg-preview.png', '2561 av Georges-V', "Montréal-Est (Québec)&nbsp; H1L 6S4", "https://www.intertek.com/canada/", 'intertek.com');
+const templateUq = createPopupTemplate('div-innocuite', 'C', 'Université du Québec', 'img/logo/ABC/Universities.png', '475 rue du Parvis', "Québec (Québec)&nbsp; G1K 9H7", "https://reseau.uquebec.ca/fr", 'reseau.uquebec.ca');
 
 markerItegaC.bindPopup(templateItegaC);
 markerInteretec.bindPopup(templateInteretec);
@@ -303,9 +303,9 @@ let markerCiraig = L.marker([45.49654272243115, -73.61807158465638], { icon: mar
 let markerAgeco = L.marker([45.533762809966454, -73.61575335943122], { icon: markerD }).addTo(map);
 let markerEllio = L.marker([45.52715099541855, -73.59714823059552], { icon: markerD }).addTo(map);
 
-const templateCiraig = createPopupTemplate('Ciraig', 'Montréal', 'img/logo/ABC/CIRAIG_NVID_logo_RGB_no-tagline-1536x873-removebg-preview.png');
-const templateAgeco = createPopupTemplate('Ageco', 'Montréal', 'img/logo/ABC/Ageco_couleur_hautedefinition-removebg-preview.png');
-const templateEllio = createPopupTemplate('Ellio', 'Montréal', 'img/logo/ABC/Ellio_RVB_tagline-removebg-preview.png');
+const templateCiraig = createPopupTemplate('div-analyse-cycle-vie', 'D', 'CIRAIG', 'img/logo/ABC/CIRAIG_NVID_logo_RGB_no-tagline-1536x873-removebg-preview.png', '3333 Queen Mary st 310', "Montréal (Québec)&nbsp; H3V 1A2", "https://ciraig.org/index.php/fr/accueil/", 'ciraig.org');
+const templateAgeco = createPopupTemplate('div-analyse-cycle-vie', 'D', 'Groupe AGECO', 'img/logo/ABC/Ageco_couleur_hautedefinition-removebg-preview.png', '25 av Mozart E bureau 310', "Montréal (Québec)&nbsp; H2S 1B1", "https://groupeageco.ca/", 'groupeageco.ca');
+const templateEllio = createPopupTemplate('div-analyse-cycle-vie', 'D', 'ELLIO', 'img/logo/ABC/Ellio_RVB_tagline-removebg-preview.png', '160 rue St Viateur Est bureau 811', "Montréal (Québec)&nbsp; H2J 2V4", "https://www.ellio.ca/", 'ellio.ca');
 
 markerCiraig.bindPopup(templateCiraig);
 markerAgeco.bindPopup(templateAgeco);
@@ -334,14 +334,19 @@ for (let i = 0; i < btnD.length; i++) {
 // Role E
 
 let markerEeq = L.marker([45.49349345929512, -73.57507804884581], { icon: markerE }).addTo(map);
+// 1600 René-Lévesque Blvd W suite 600, Montreal, Quebec H3H 1P9
 let markerCartier = L.marker([45.41341971611436, -73.01844027302089], { icon: markerE }).addTo(map);
+// 2325 Industriel, Saint-Césaire, Quebec J0L 1T0
 let markerBraque = L.marker([45.505540930225855, -73.55490342042299], { icon: markerE }).addTo(map);
+// 19, rue Le Royer Ouest, bureau 200 Montréal (Québec) H2Y 1W4
 let markerPigeon = L.marker([45.50579339931251, -73.55534293510962], { icon: markerE }).addTo(map);
+// 480 Boul. Saint-Laurent, Montréal, QC H2Y 3Y7
 
-const templateEeq = createPopupTemplate('EEQ', 'Montréal', 'img/logo/ABC/EEQ_Logo_FR_EnsembleSeul_Avril2022_F-removebg-preview.png');
-const templateCartier = createPopupTemplate('Cartier', 'Montréal', 'img/logo/ABC/Cartier-emballage_logo-removebg-preview.png');
-const templateBraque = createPopupTemplate('Braque', 'Montréal', 'img/logo/ABC/Braque_logo_Final_Black-removebg-preview.png');
-const templatePigeon = createPopupTemplate('Pigeon', 'Montréal', 'img/logo/ABC/Pigeon-Brands.svg');
+const templateEeq = createPopupTemplate('div-ecoconception', 'E', 'EEQ', 'img/logo/ABC/EEQ_Logo_FR_EnsembleSeul_Avril2022_F-removebg-preview.png', '1600 René-Lévesque Blvd W suite 600', "Montréal (Québec)&nbsp; H3H 1P9", "https://www.eeq.ca/", 'eeq.ca');
+const templateCartier = createPopupTemplate('div-ecoconception', 'E', 'Cartier', 'img/logo/ABC/Cartier-emballage_logo-removebg-preview.png', '2325 Industriel', "Saint-Césaire (Québec)&nbsp; J0L 1T0", "https://www.emballagecartier.com/", 'emballagecartier.com');
+const templateBraque = createPopupTemplate('div-ecoconception', 'E', 'Braque', 'img/logo/ABC/Braque_logo_Final_Black-removebg-preview.png', '19, rue Le Royer Ouest, bureau 200', "Montréal (Québec)&nbsp; H2Y 1W4", "https://www.braque.ca/", 'braque.ca');
+const templatePigeon = createPopupTemplate('div-ecoconception', 'E', 'Pigeon', 'img/logo/ABC/Pigeon-Brands.svg', '480 Boul. Saint-Laurent', "Montréal (Québec)&nbsp; H2Y 3Y7", "https://www.pigeonbrands.com/", 'pigeonbrands.com');
+
 
 markerEeq.bindPopup(templateEeq);
 markerCartier.bindPopup(templateCartier);
