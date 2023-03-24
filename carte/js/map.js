@@ -56,13 +56,13 @@ function createPopupTemplate(cat, icone, name, logo, adresse, ville, urlsiteweb,
 // St jean : 45.36143507347949, -73.28754397104049
 
 
-let markerTCPackaging = L.marker([45.62306097667415, -73.58284014432547], { icon: marker1 }).addTo(map);
+let markerTCPackaging = L.marker([45.62152002789094, -73.58301381082575], { icon: marker1 }).addTo(map);
 let markerProAmpac = L.marker([45.701837574721466, -73.75424020449023], { icon: marker1 }).addTo(map);
 let markerStJean = L.marker([45.36143507347949, -73.28754397104049], { icon: marker1 }).addTo(map);
 
-const templateTCPackaging = createPopupTemplate('div-convertisseurs', '1', 'TC Packaging', 'img/logo/123/TC-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://tctranscontinental.com/en-us/packaging", 'tctranscontinental.com');
-const templateProAmpac = createPopupTemplate('div-convertisseurs', '1', 'ProAmpac', 'img/logo/123/ProAmpac-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.proampac.com/", 'proampac.com');
-const templateStJean = createPopupTemplate('div-convertisseurs', '1', 'St Jean', 'img/logo/123/Emballage_st-jean.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.sjpack.com/fr/", 'sjpack.com');
+const templateTCPackaging = createPopupTemplate('div-convertisseurs', '1', 'TC Transcontinental', 'img/logo/123/TC-removebg-preview.png', '11060, bd Parkway', "Anjou (Québec)&nbsp; H1J 1S1", "https://tctranscontinental.com/en-us/packaging", 'tctranscontinental.com');
+const templateProAmpac = createPopupTemplate('div-convertisseurs', '1', 'ProAmpac', 'img/logo/123/ProAmpac-removebg-preview.png', '1041, Bd des Entreprises', "Terrebonne (Québec)&nbsp; J6Y 1V2", "https://www.proampac.com/", 'proampac.com');
+const templateStJean = createPopupTemplate('div-convertisseurs', '1', 'St Jean', 'img/logo/123/Emballage_st-jean.png', '80, Rue Moreau', "Saint-Jean-sur-Richelieu (Québec)&nbsp; J2W 2M4", "https://www.sjpack.com/fr/", 'sjpack.com');
 
 markerTCPackaging.bindPopup(templateTCPackaging);
 markerProAmpac.bindPopup(templateProAmpac);
@@ -113,9 +113,9 @@ let markerCarrousel = L.marker([45.56961302127696, -73.425589], { icon: marker2 
 let markerDuropac = L.marker([45.37091533159878, -73.52275776932923], { icon: marker2 }).addTo(map);
 let markerTalthi = L.marker([45.62733599060354, -72.99022332883959], { icon: marker2 }).addTo(map);
 
-const templateCarrousel = createPopupTemplate('div-grossistes', '2', 'Carrousel', 'img/logo/123/Carrousel-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.carrousel.ca", 'carrousel.ca');
-const templateDuropac = createPopupTemplate('div-grossistes', '2', 'Duropac', 'img/logo/123/Duropac-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.duropac.com", 'duropac.com');
-const templateTalthi = createPopupTemplate('div-grossistes', '2', 'Talthi', 'img/logo/123/Talthi-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.talthi.ca", 'talthi.com');
+const templateCarrousel = createPopupTemplate('div-grossistes', '2', 'Carrousel', 'img/logo/123/Carrousel-removebg-preview.png', '1401, rue Ampère', "Boucherville (Québec)&nbsp; J4B 6C5", "https://www.carrousel.ca", 'carrousel.ca');
+const templateDuropac = createPopupTemplate('div-grossistes', '2', 'Duropac', 'img/logo/123/Duropac-removebg-preview.png', '305, avenue Liberté', "Candiac (Québec)&nbsp; J5R 6Z7", "https://www.duropac.com", 'duropac.com');
+const templateTalthi = createPopupTemplate('div-grossistes', '2', 'Talthi', 'img/logo/123/Talthi-removebg-preview.png', '4035, imp. Bérard', "Saint-Hyacinthe (Québec)&nbsp; J2S 8Z8", "https://www.talthi.ca", 'talthi.com');
 
 
 markerCarrousel.bindPopup(templateCarrousel);
