@@ -107,7 +107,6 @@ const templateCarrousel = createPopupTemplate('div-grossistes', '2', 'Carrousel'
 const templateDuropac = createPopupTemplate('div-grossistes', '2', 'Duropac', 'img/logo/123/Duropac-removebg-preview.png', '305, av Liberté', "Candiac (Québec)&nbsp; J5R 6Z7", "https://www.duropac.com", 'duropac.com');
 const templateTalthi = createPopupTemplate('div-grossistes', '2', 'Talthi', 'img/logo/123/Talthi-removebg-preview.png', '4035, imp. Bérard', "Saint-Hyacinthe (Québec)&nbsp; J2S 8Z8", "https://www.talthi.ca", 'talthi.com');
 
-
 markerCarrousel.bindPopup(templateCarrousel);
 markerDuropac.bindPopup(templateDuropac);
 markerTalthi.bindPopup(templateTalthi);
@@ -198,10 +197,7 @@ for (let i = 0; i < btn4.length; i++) {
     });
 }
 
-
-
 // Role A
-
 
 let markerItegaA = L.marker([45.578725518839754, -73.54517588465924], { icon: markerA }).addTo(map);
 
@@ -227,7 +223,6 @@ for (let i = 0; i < btnA.length; i++) {
         });
     });
 }
-  
 
 // Role B
 
@@ -275,7 +270,6 @@ const templateUq = createPopupTemplate('div-innocuite', 'C', 'Université du Qu�
 markerItegaC.bindPopup(templateItegaC);
 markerInteretec.bindPopup(templateInteretec);
 markerUq.bindPopup(templateUq);
-
 
 const markersC = [markerItegaC, markerInteretec, markerUq];
 
@@ -343,7 +337,6 @@ const templateCartier = createPopupTemplate('div-ecoconception', 'E', 'Cartier',
 const templateBraque = createPopupTemplate('div-ecoconception', 'E', 'Braque', 'img/logo/ABC/Braque_logo_Final_Black-removebg-preview.png', '19, rue Le Royer Ouest, bureau 200', "Montréal (Québec)&nbsp; H2Y 1W4", "https://www.braque.ca/", 'braque.ca');
 const templatePigeon = createPopupTemplate('div-ecoconception', 'E', 'Pigeon', 'img/logo/ABC/Pigeon-Brands.svg', '480, bd Saint-Laurent', "Montréal (Québec)&nbsp; H2Y 3Y7", "https://www.pigeonbrands.com/", 'pigeonbrands.com');
 
-
 markerEeq.bindPopup(templateEeq);
 markerCartier.bindPopup(templateCartier);
 markerBraque.bindPopup(templateBraque);
@@ -378,7 +371,6 @@ const templateMetro = createPopupTemplate('div-gestion-distribution', 'F', 'Metr
 const templateLoblaw = createPopupTemplate('div-gestion-distribution', 'F', 'Loblaw', 'img/logo/ABC/Loblaws-removebg-preview.png', '400, av Sainte-Croix', "Saint-Laurent (Québec)&nbsp; H4N 3K4", "https://www.loblaws.ca/", 'loblaws.ca');
 const templateSobeys = createPopupTemplate('div-gestion-distribution', 'F', 'Sobeys', 'img/logo/ABC/Sobeys-removebg-preview.png', '11281, bd Albert-Hudon', "Montréal-Nord (Québec)&nbsp; H1G 3J5", "https://www.sobeys.com/", 'sobeys.com');
 
-
 markerMetro.bindPopup(templateMetro);
 markerLoblaw.bindPopup(templateLoblaw);
 markerSobeys.bindPopup(templateSobeys);
@@ -403,11 +395,8 @@ markerGordon.bindPopup(templateGordon);
 markerCourchesne.bindPopup(templateCourchesne);
 
 let markerMaturin = L.marker([45.544477857567955, -73.49202986526367], { icon: markerF }).addTo(map);
-//600 Bd Roland-Therrien, Longueuil, QC J4H 3V9
 let markerLufa = L.marker([45.501525587988496, -73.7089643923301], { icon: markerF }).addTo(map);
-// 3075 Boulevard Thimens #201, Saint-Laurent, Quebec H4R 1Y2
 let markerVoila = L.marker([45.476962335284426, -73.79766461383103], { icon: markerF }).addTo(map);
-// 2400 Route Transcanadienne, Pointe-Claire, QC H9R 1B1
 
 const templateMaturin = createPopupTemplate('div-gestion-distribution', 'F', 'Maturin', 'img/logo/ABC/Maturin-Logo-removebg-preview.png', '600, bd Roland-Therrien', "Longueuil (Québec)&nbsp; J4H 3V9", "https://www.maturin.ca/", 'maturin.ca');
 const templateLufa = createPopupTemplate('div-gestion-distribution', 'F', 'Fermes Lufa', 'img/logo/ABC/Fermes-Lufa_Logo-removebg-preview.png', '3075, bd Thimens', "Saint-Laurent (Québec)&nbsp; H4R 1Y2", "https://montreal.lufa.com/fr", 'lufa.com');
@@ -418,15 +407,10 @@ markerLufa.bindPopup(templateLufa);
 markerVoila.bindPopup(templateVoila);
 
 let markerAda = L.marker([45.53069307910462, -73.5633780306883], { icon: markerF }).addTo(map);
-// 2120 R. Sherbrooke E, Montréal, QC H2K 1C3
 let markerCqcd = L.marker([45.526871883156154, -73.57501417186553], { icon: markerF }).addTo(map);
-// 4284 Rue de la Roche Bureau 217, Montréal, QC H2J 3H9
 
 const templateAda = createPopupTemplate('div-gestion-distribution', 'F', 'ADAQ', 'img/logo/ABC/Association_des_detaillants_en_alimentation_du_Quebec_ADAQ-removebg-preview.png', '2120, rue Sherbrooke E', "Montréal (Québec)&nbsp; H2K 1C3", "https://www.adaq.qc.ca/", 'adaq.qc.ca');
 const templateCqcd = createPopupTemplate('div-gestion-distribution', 'F', 'CQCD', 'img/logo/ABC/CQCD-Logo_Crop-removebg-preview.png', '4284, rue de la Roche', "Montréal (Québec)&nbsp; H2J 3H9", "https://www.cqcd.org/", 'cqcd.org');
-
-// const templateAda = createPopupTemplate('ADA', 'City', 'img/logo/ABC/Association_des_detaillants_en_alimentation_du_Quebec_ADAQ-removebg-preview.png');
-// const templateCqcd = createPopupTemplate('CQCD', 'City', 'img/logo/ABC/CQCD-Logo_Crop-removebg-preview.png');
 
 markerAda.bindPopup(templateAda);
 markerCqcd.bindPopup(templateCqcd);
@@ -454,15 +438,12 @@ for (let i = 0; i < btnF.length; i++) {
 
 const markersApprovisionnement = [markerTCPackaging, markerProAmpac, markerStJean, markerCarrousel, markerDuropac, markerTalthi, markerLelys, markerSteJulie, markerAlliance, markerAbeille, markerAxia, markerSnackdepot];
 
-
 const markersDevTech = [markerItegaA, markerEurofins, markerRoundup, markerMicom, markerItegaC, markerInteretec, markerUq, markerCiraig, markerAgeco, markerEllio, markerEeq, markerCartier, markerBraque, markerPigeon, markerSysco, markerGordon, markerCourchesne, markerMaturin, markerLufa, markerVoila, markerAda, markerCqcd, markerLoblaw, markerSobeys, markerMetro, markerColabor];
-
 
 let approIni = document.getElementById('appro-ini'),
     devTechIni = document.getElementById('dev-tech-ini'),
     divApprovMobile = document.getElementById('approvisionnement-mobile'),
     divDevTechMobile = document.getElementById('developpement-technologique-mobile');
-
 
 let cpt = 0;
 let cptMobile = 0;
@@ -485,8 +466,6 @@ approIni.addEventListener("click", function () {
     }
     cpt++;
 });
-
-
 
 devTechIni.addEventListener("click", function () {
     if (cpt === 0) {
@@ -545,10 +524,7 @@ divDevTechMobile.addEventListener("click", function () {
     cptMobile++;
 });
 
-
-
 let markersTout = [markerProAmpac, markerStJean, markerTCPackaging, markerCarrousel, markerDuropac, markerTalthi, markerAlliance, markerLelys, markerSteJulie, markerAbeille, markerAxia, markerSnackdepot, markerItegaA, markerEurofins, markerRoundup, markerMicom, markerItegaC, markerInteretec, markerUq, markerCiraig, markerAgeco, markerEllio, markerEeq, markerCartier, markerBraque, markerPigeon, markerLoblaw, markerSobeys, markerMetro, markerColabor, markerSysco, markerGordon, markerCourchesne, markerMaturin, markerVoila, markerLufa, markerAda, markerCqcd];
-
 
 let divLogos = document.querySelectorAll('[data-js-flex-logo]');
 let tabLogos = [];
