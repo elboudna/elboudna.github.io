@@ -138,9 +138,6 @@ let markerLelys = L.marker([45.59409038967441, -73.73784582884048], { icon: mark
 let markerSteJulie = L.marker([45.57995245855943, -73.32304855613708], { icon: marker3 }).addTo(map);
 let markerAlliance = L.marker([45.75411814001102, -73.4472546171883], { icon: marker3 }).addTo(map);
 
-
-// 114 Rue de Normandie, Repentigny, QC J6A 6B9
-
 const templateLelys = createPopupTemplate('div-impression', '3', 'Imprimerie Groupe Lelys', 'img/logo/123/Lelys-removebg-preview.png', '3275, av Francis-Hughes 2nd Floor', "Laval (Québec)&nbsp; H7L 5A5", "https://www.lelys.com", 'lelys.com');
 const templateSteJulie = createPopupTemplate('div-impression', '3', 'Imprimerie Ste Julie Inc', 'img/logo/123/Imprimerie_Ste-Julie-removebg-preview.png', '1851, rue Nobel', "Sainte-Julie (Québec)&nbsp; J3E 1Z6", "https://www.impsj.com", 'impsj.com');
 const templateAlliance = createPopupTemplate('div-impression', '3', 'Alliance Étiquettes et Solutions d&apos;emballage', 'img/logo/123/Alliance-Etiquette_et_solutions_emballage-removebg-preview.png', '114, Rue de Normandie', "Repentigny (Québec)&nbsp; J6A 6B9", "https://www.allianceinc.ca", 'allianceinc.ca');
@@ -148,7 +145,6 @@ const templateAlliance = createPopupTemplate('div-impression', '3', 'Alliance É
 markerLelys.bindPopup(templateLelys);
 markerSteJulie.bindPopup(templateSteJulie);
 markerAlliance.bindPopup(templateAlliance);
-
 
 const markers3 = [markerLelys, markerSteJulie, markerAlliance];
 
@@ -171,13 +167,15 @@ for (let i = 0; i < btn3.length; i++) {
 
 // ROLE 4
 
-let markerAbeille = L.marker([45.6143100245516, -73.5911116443582], { icon: marker4 }).addTo(map);
-let markerAxia = L.marker([45.60529091818758, -73.60249939155307], { icon: marker4 }).addTo(map);
-let markerSnackdepot = L.marker([46.868472634771464, -71.1820438171603], { icon: marker4 }).addTo(map);
+// 95 Rue des Passerins, Québec, QC G1E 1Z9
 
-const templateAbeille = createPopupTemplate('div-co-emballage', '4', 'Abeille', 'img/logo/123/Abeilles_busy_bees-removebg-preview.png', '2525, av Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.abusy.ca", 'abusy.ca');
-const templateAxia = createPopupTemplate('div-co-emballage', '4', 'Axia', 'img/logo/123/Axia-removebg-preview.png', '2525, av Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.axiaservices.com/emballage-1", 'axiaservices.com');
-const templateSnackdepot = createPopupTemplate('div-co-emballage', '4', 'Snackdepot', 'img/logo/123/Snack_depot-removebg-preview.png', '2525, av Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.snackdepot.ca", 'ssnackdepot.ca');
+let markerAbeille = L.marker([45.613511790746, -73.59100542208498], { icon: marker4 }).addTo(map);
+let markerAxia = L.marker([45.60529091818758, -73.60249939155307], { icon: marker4 }).addTo(map);
+let markerSnackdepot = L.marker([46.86838197493369, -71.18200018471804], { icon: marker4 }).addTo(map);
+
+const templateAbeille = createPopupTemplate('div-co-emballage', '4', 'Abeilles Busy Bees', 'img/logo/123/Abeilles_busy_bees-removebg-preview.png', '11100, Bd Louis H. La Fontaine', "Anjou (Québec)&nbsp; H1J 2Y5", "https://www.abusy.ca", 'abusy.ca');
+const templateAxia = createPopupTemplate('div-co-emballage', '4', 'Axia Services', 'img/logo/123/Axia-removebg-preview.png', '9245, Boul Langelier', "Saint-Léonard (Québec)&nbsp; H1P 3K9", "https://www.axiaservices.com/emballage-1", 'axiaservices.com');
+const templateSnackdepot = createPopupTemplate('div-co-emballage', '4', 'Snackdepot', 'img/logo/123/Snack_depot-removebg-preview.png', '95, Rue des Passerins', "Québec (Québec)&nbsp; G1E 1Z9", "https://www.snackdepot.ca", 'snackdepot.ca');
 
 markerAbeille.bindPopup(templateAbeille);
 markerAxia.bindPopup(templateAxia);
