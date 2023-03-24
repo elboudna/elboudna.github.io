@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 90%;
+    width: 95%;
     margin-top: 10px;
     border-radius: 10px;
     gap: 5px;
@@ -41,7 +41,7 @@ body {
 }
 
 .leaflet-popup-content-wrapper {
-    width: 290px; 
+    width: 310px; 
     border-radius: 20px !important ;
     height: 200px;
     display: flex;
@@ -69,6 +69,19 @@ body {
     align-items: center;
     gap: 15px;
     justify-content: center;
+    
+  }
+
+  .flex-adresse-logo p:first-of-type{
+    margin-bottom: 0 !important;
+  }
+
+  .flex-adresse-logo p:last-of-type{
+    margin-top: 0 !important;
+  }
+
+  .flex-adresse-logo p{
+    font-weight: bold;
   }
 
   .leaflet-popup-content > div{
