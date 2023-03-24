@@ -51,11 +51,6 @@ function createPopupTemplate(cat, icone, name, logo, adresse, ville, urlsiteweb,
 
 // ROLE1
 
-// tc packaging : 45.62306097667415, -73.58284014432547
-// proAmpac : 45.701837574721466, -73.75424020449023
-// St jean : 45.36143507347949, -73.28754397104049
-
-
 let markerTCPackaging = L.marker([45.62152002789094, -73.58301381082575], { icon: marker1 }).addTo(map);
 let markerProAmpac = L.marker([45.701837574721466, -73.75424020449023], { icon: marker1 }).addTo(map);
 let markerStJean = L.marker([45.36143507347949, -73.28754397104049], { icon: marker1 }).addTo(map);
@@ -104,17 +99,12 @@ for (let i = 0; i < btn1.length; i++) {
 
 // ROLE 2
 
-// Carrousel : 45.56961302127696, -73.425589
-// duropac : 45.37091533159878, -73.52275776932923
-// talthi : 45.62733599060354, -72.99022332883959
-
-
 let markerCarrousel = L.marker([45.56961302127696, -73.425589], { icon: marker2 }).addTo(map);
 let markerDuropac = L.marker([45.37091533159878, -73.52275776932923], { icon: marker2 }).addTo(map);
 let markerTalthi = L.marker([45.62733599060354, -72.99022332883959], { icon: marker2 }).addTo(map);
 
 const templateCarrousel = createPopupTemplate('div-grossistes', '2', 'Carrousel', 'img/logo/123/Carrousel-removebg-preview.png', '1401, rue Ampère', "Boucherville (Québec)&nbsp; J4B 6C5", "https://www.carrousel.ca", 'carrousel.ca');
-const templateDuropac = createPopupTemplate('div-grossistes', '2', 'Duropac', 'img/logo/123/Duropac-removebg-preview.png', '305, avenue Liberté', "Candiac (Québec)&nbsp; J5R 6Z7", "https://www.duropac.com", 'duropac.com');
+const templateDuropac = createPopupTemplate('div-grossistes', '2', 'Duropac', 'img/logo/123/Duropac-removebg-preview.png', '305, av Liberté', "Candiac (Québec)&nbsp; J5R 6Z7", "https://www.duropac.com", 'duropac.com');
 const templateTalthi = createPopupTemplate('div-grossistes', '2', 'Talthi', 'img/logo/123/Talthi-removebg-preview.png', '4035, imp. Bérard', "Saint-Hyacinthe (Québec)&nbsp; J2S 8Z8", "https://www.talthi.ca", 'talthi.com');
 
 
@@ -144,18 +134,16 @@ for (let i = 0; i < btn2.length; i++) {
 
 // ROLE 3
 
-// lelys : 45.59409038967441, -73.73784582884048
-// ste julie : 45.57995245855943, -73.32304855613708    
-// alliance : 45.75411814001102, -73.4472546171883
-
-
 let markerLelys = L.marker([45.59409038967441, -73.73784582884048], { icon: marker3 }).addTo(map);
 let markerSteJulie = L.marker([45.57995245855943, -73.32304855613708], { icon: marker3 }).addTo(map);
 let markerAlliance = L.marker([45.75411814001102, -73.4472546171883], { icon: marker3 }).addTo(map);
 
-const templateLelys = createPopupTemplate('div-impression', '3', 'Lelys', 'img/logo/123/Lelys-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.lelys.com", 'lelys.com');
-const templateSteJulie = createPopupTemplate('div-impression', '3', 'Ste Julie', 'img/logo/123/Imprimerie_Ste-Julie-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.impsj.com", 'impsj.com');
-const templateAlliance = createPopupTemplate('div-impression', '3', 'Alliance', 'img/logo/123/Alliance-Etiquette_et_solutions_emballage-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.allianceinc.ca", 'allianceinc.ca');
+
+// 114 Rue de Normandie, Repentigny, QC J6A 6B9
+
+const templateLelys = createPopupTemplate('div-impression', '3', 'Imprimerie Groupe Lelys', 'img/logo/123/Lelys-removebg-preview.png', '3275, av Francis-Hughes 2nd Floor', "Laval (Québec)&nbsp; H7L 5A5", "https://www.lelys.com", 'lelys.com');
+const templateSteJulie = createPopupTemplate('div-impression', '3', 'Imprimerie Ste Julie Inc', 'img/logo/123/Imprimerie_Ste-Julie-removebg-preview.png', '1851, rue Nobel', "Sainte-Julie (Québec)&nbsp; J3E 1Z6", "https://www.impsj.com", 'impsj.com');
+const templateAlliance = createPopupTemplate('div-impression', '3', 'Alliance Étiquettes et Solutions d&apos;emballage', 'img/logo/123/Alliance-Etiquette_et_solutions_emballage-removebg-preview.png', '114, Rue de Normandie', "Repentigny (Québec)&nbsp; J6A 6B9", "https://www.allianceinc.ca", 'allianceinc.ca');
 
 markerLelys.bindPopup(templateLelys);
 markerSteJulie.bindPopup(templateSteJulie);
@@ -183,17 +171,13 @@ for (let i = 0; i < btn3.length; i++) {
 
 // ROLE 4
 
-// abeille : 45.6143100245516, -73.5911116443582
-// axia : 45.60529091818758, -73.60249939155307
-// snackdepot : 46.868472634771464, -71.1820438171603
-
 let markerAbeille = L.marker([45.6143100245516, -73.5911116443582], { icon: marker4 }).addTo(map);
 let markerAxia = L.marker([45.60529091818758, -73.60249939155307], { icon: marker4 }).addTo(map);
 let markerSnackdepot = L.marker([46.868472634771464, -71.1820438171603], { icon: marker4 }).addTo(map);
 
-const templateAbeille = createPopupTemplate('div-co-emballage', '4', 'Abeille', 'img/logo/123/Abeilles_busy_bees-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.abusy.ca", 'abusy.ca');
-const templateAxia = createPopupTemplate('div-co-emballage', '4', 'Axia', 'img/logo/123/Axia-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.axiaservices.com/emballage-1", 'axiaservices.com');
-const templateSnackdepot = createPopupTemplate('div-co-emballage', '4', 'Snackdepot', 'img/logo/123/Snack_depot-removebg-preview.png', '2525, avenue Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.snackdepot.ca", 'ssnackdepot.ca');
+const templateAbeille = createPopupTemplate('div-co-emballage', '4', 'Abeille', 'img/logo/123/Abeilles_busy_bees-removebg-preview.png', '2525, av Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.abusy.ca", 'abusy.ca');
+const templateAxia = createPopupTemplate('div-co-emballage', '4', 'Axia', 'img/logo/123/Axia-removebg-preview.png', '2525, av Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.axiaservices.com/emballage-1", 'axiaservices.com');
+const templateSnackdepot = createPopupTemplate('div-co-emballage', '4', 'Snackdepot', 'img/logo/123/Snack_depot-removebg-preview.png', '2525, av Masson', "Montréal (Québec)&nbsp; H1V 3Z9", "https://www.snackdepot.ca", 'ssnackdepot.ca');
 
 markerAbeille.bindPopup(templateAbeille);
 markerAxia.bindPopup(templateAxia);
@@ -222,8 +206,6 @@ for (let i = 0; i < btn4.length; i++) {
 
 // Role A
 
-// itega : 45.578725518839754, -73.54517588465924
-
 let markerItegaA = L.marker([45.578725518839754, -73.54517588465924], { icon: markerA }).addTo(map);
 
 const templateItegaA = createPopupTemplate('Itega', 'Montréal', 'img/logo/ABC/ITEGA_CMYK_M-removebg-preview.png');
@@ -249,31 +231,9 @@ for (let i = 0; i < btnA.length; i++) {
         });
     });
 }
-
-// btn1.addEventListener('click', function () {
-//     isMarkerVisible1 = !isMarkerVisible1;
-  
-//     markers1.forEach(marker => {
-//       if (!isMarkerVisible1) {
-//         // Make marker bigger
-//         marker.options.icon.options.iconSize = [70, 70];
-//         marker.options.icon.options.iconAnchor = [35, 35];
-//       } else {
-//         // Make marker smaller
-//         marker.options.icon.options.iconSize = [60, 60];
-//         marker.options.icon.options.iconAnchor = [30, 30];
-//       }
-//       marker.setIcon(marker.options.icon);
-//       marker.update();
-//     });
-//   });
   
 
 // Role B
-
-//eurofins : 45.56313548065247, -73.45899298824833
-//ame roundup : 49.285889177594505, -123.11654623049542
-//micom : 45.451575269772604, -73.72897711534362
 
 let markerEurofins = L.marker([45.56313548065247, -73.45899298824833], { icon: markerB }).addTo(map);
 let markerRoundup = L.marker([49.285889177594505, -123.11654623049542], { icon: markerB }).addTo(map);
@@ -307,10 +267,6 @@ for (let i = 0; i < btnB.length; i++) {
 }
 
 // Role C
-
-// itega : 45.578725518839754, -73.54517588465924
-// interetec : 45.6131639803758, -73.51578349825002
-// université de quebec : 46.81326391387531, -71.2224014
 
 let markerItegaC = L.marker([45.578725518839754, -73.54517588465924], { icon: markerC }).addTo(map);
 let markerInteretec = L.marker([45.6131639803758, -73.51578349825002], { icon: markerC }).addTo(map);
@@ -347,10 +303,6 @@ for (let i = 0; i < btnC.length; i++) {
 
 // Role D
 
-//ciraig : 45.49654272243115, -73.61807158465638
-//ageco : 45.533762809966454, -73.61575335943122
-//ellio  : 45.52715099541855, -73.59714823059552
-
 let markerCiraig = L.marker([45.49654272243115, -73.61807158465638], { icon: markerD }).addTo(map);
 let markerAgeco = L.marker([45.533762809966454, -73.61575335943122], { icon: markerD }).addTo(map);
 let markerEllio = L.marker([45.52715099541855, -73.59714823059552], { icon: markerD }).addTo(map);
@@ -384,11 +336,6 @@ for (let i = 0; i < btnD.length; i++) {
 }
 
 // Role E
-
-// EEQ : 45.49349345929512, -73.57507804884581
-// cartier : 45.41341971611436, -73.01844027302089
-// braque : 45.505540930225855, -73.55490342042299
-// pigeon : 45.50579339931251, -73.55534293510962
 
 let markerEeq = L.marker([45.49349345929512, -73.57507804884581], { icon: markerE }).addTo(map);
 let markerCartier = L.marker([45.41341971611436, -73.01844027302089], { icon: markerE }).addTo(map);
@@ -426,10 +373,6 @@ for (let i = 0; i < btnE.length; i++) {
 
 // Role F
 
-// metro : 45.66607777683485, -73.53240565952018
-// Loblaw: 45.5090540791043, -73.6691895306888
-// Sobey's : 45.61267045127222, -73.6056609
-
 let markerMetro = L.marker([45.66607777683485, -73.53240565952018], { icon: markerF }).addTo(map);
 let markerLoblaw = L.marker([45.5090540791043, -73.6691895306888], { icon: markerF }).addTo(map);
 let markerSobeys = L.marker([45.61267045127222, -73.6056609], { icon: markerF }).addTo(map);
@@ -441,11 +384,6 @@ const templateSobeys = createPopupTemplate('Sobeys', 'Montréal', 'img/logo/ABC/
 markerMetro.bindPopup(templateMetro);
 markerLoblaw.bindPopup(templateLoblaw);
 markerSobeys.bindPopup(templateSobeys);
-
-// Colabor : 45.56309100212611, -73.40419000185233
-// sysco : 45.56629351388272, -73.44302092642349
-// service alimentaire gordon : 45.565936445536785, -73.3991569497242
-// courchesne Larose : 45.626109350712994, -73.5525686558714
 
 let markerColabor = L.marker([45.56309100212611, -73.40419000185233], { icon: markerF }).addTo(map);
 let markerSysco = L.marker([45.56629351388272, -73.44302092642349], { icon: markerF }).addTo(map);
@@ -465,11 +403,6 @@ markerSysco.bindPopup(templateSysco);
 markerGordon1.bindPopup(templateGordon1);
 markerCourchesne1.bindPopup(templateCourchesne1);
 
-
-// Maturin : 45.544598202940534, -73.49200964418236
-// Fermes lufa : 45.50160373678727, -73.70900492671767
-// Voila par iga : 45.476962335284426, -73.79766461383103
-
 let markerMaturin = L.marker([45.544598202940534, -73.49200964418236], { icon: markerF }).addTo(map);
 let markerLufa = L.marker([45.50160373678727, -73.70900492671767], { icon: markerF }).addTo(map);
 let markerVoila = L.marker([45.476962335284426, -73.79766461383103], { icon: markerF }).addTo(map);
@@ -481,10 +414,6 @@ const templateVoila = createPopupTemplate('Voila par IGA', 'City', 'img/logo/ABC
 markerMaturin.bindPopup(templateMaturin);
 markerLufa.bindPopup(templateLufa);
 markerVoila.bindPopup(templateVoila);
-
-
-// ADA : 45.53069307910462, -73.5633780306883
-// CQCD : 45.526871883156154, -73.57501417186553
 
 let markerAda = L.marker([45.53069307910462, -73.5633780306883], { icon: markerF }).addTo(map);
 let markerCqcd = L.marker([45.526871883156154, -73.57501417186553], { icon: markerF }).addTo(map);
