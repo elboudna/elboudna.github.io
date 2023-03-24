@@ -56,8 +56,8 @@ let markerProAmpac = L.marker([45.701837574721466, -73.75424020449023], { icon: 
 let markerStJean = L.marker([45.36143507347949, -73.28754397104049], { icon: marker1 }).addTo(map);
 
 const templateTCPackaging = createPopupTemplate('div-convertisseurs', '1', 'TC Transcontinental', 'img/logo/123/TC-removebg-preview.png', '11060, bd Parkway', "Anjou (Québec)&nbsp; H1J 1S1", "https://tctranscontinental.com/en-us/packaging", 'tctranscontinental.com');
-const templateProAmpac = createPopupTemplate('div-convertisseurs', '1', 'ProAmpac', 'img/logo/123/ProAmpac-removebg-preview.png', '1041, Bd des Entreprises', "Terrebonne (Québec)&nbsp; J6Y 1V2", "https://www.proampac.com/", 'proampac.com');
-const templateStJean = createPopupTemplate('div-convertisseurs', '1', 'St Jean', 'img/logo/123/Emballage_st-jean.png', '80, Rue Moreau', "Saint-Jean-sur-Richelieu (Québec)&nbsp; J2W 2M4", "https://www.sjpack.com/fr/", 'sjpack.com');
+const templateProAmpac = createPopupTemplate('div-convertisseurs', '1', 'ProAmpac', 'img/logo/123/ProAmpac-removebg-preview.png', '1041, bd des Entreprises', "Terrebonne (Québec)&nbsp; J6Y 1V2", "https://www.proampac.com/", 'proampac.com');
+const templateStJean = createPopupTemplate('div-convertisseurs', '1', 'St Jean', 'img/logo/123/Emballage_st-jean.png', '80, rue Moreau', "Saint-Jean-sur-Richelieu (Québec)&nbsp; J2W 2M4", "https://www.sjpack.com/fr/", 'sjpack.com');
 
 markerTCPackaging.bindPopup(templateTCPackaging);
 markerProAmpac.bindPopup(templateProAmpac);
@@ -140,7 +140,7 @@ let markerAlliance = L.marker([45.75411814001102, -73.4472546171883], { icon: ma
 
 const templateLelys = createPopupTemplate('div-impression', '3', 'Imprimerie Groupe Lelys', 'img/logo/123/Lelys-removebg-preview.png', '3275, av Francis-Hughes 2nd Floor', "Laval (Québec)&nbsp; H7L 5A5", "https://www.lelys.com", 'lelys.com');
 const templateSteJulie = createPopupTemplate('div-impression', '3', 'Imprimerie Ste Julie Inc', 'img/logo/123/Imprimerie_Ste-Julie-removebg-preview.png', '1851, rue Nobel', "Sainte-Julie (Québec)&nbsp; J3E 1Z6", "https://www.impsj.com", 'impsj.com');
-const templateAlliance = createPopupTemplate('div-impression', '3', 'Alliance Étiquettes et Solutions d&apos;emballage', 'img/logo/123/Alliance-Etiquette_et_solutions_emballage-removebg-preview.png', '114, Rue de Normandie', "Repentigny (Québec)&nbsp; J6A 6B9", "https://www.allianceinc.ca", 'allianceinc.ca');
+const templateAlliance = createPopupTemplate('div-impression', '3', 'Alliance Étiquettes et Solutions d&apos;emballage', 'img/logo/123/Alliance-Etiquette_et_solutions_emballage-removebg-preview.png', '114, rue de Normandie', "Repentigny (Québec)&nbsp; J6A 6B9", "https://www.allianceinc.ca", 'allianceinc.ca');
 
 markerLelys.bindPopup(templateLelys);
 markerSteJulie.bindPopup(templateSteJulie);
@@ -167,15 +167,13 @@ for (let i = 0; i < btn3.length; i++) {
 
 // ROLE 4
 
-// 95 Rue des Passerins, Québec, QC G1E 1Z9
-
 let markerAbeille = L.marker([45.613511790746, -73.59100542208498], { icon: marker4 }).addTo(map);
 let markerAxia = L.marker([45.60529091818758, -73.60249939155307], { icon: marker4 }).addTo(map);
 let markerSnackdepot = L.marker([46.86838197493369, -71.18200018471804], { icon: marker4 }).addTo(map);
 
-const templateAbeille = createPopupTemplate('div-co-emballage', '4', 'Abeilles Busy Bees', 'img/logo/123/Abeilles_busy_bees-removebg-preview.png', '11100, Bd Louis H. La Fontaine', "Anjou (Québec)&nbsp; H1J 2Y5", "https://www.abusy.ca", 'abusy.ca');
+const templateAbeille = createPopupTemplate('div-co-emballage', '4', 'Abeilles Busy Bees', 'img/logo/123/Abeilles_busy_bees-removebg-preview.png', '11100, bd Louis H. La Fontaine', "Anjou (Québec)&nbsp; H1J 2Y5", "https://www.abusy.ca", 'abusy.ca');
 const templateAxia = createPopupTemplate('div-co-emballage', '4', 'Axia Services', 'img/logo/123/Axia-removebg-preview.png', '9245, Boul Langelier', "Saint-Léonard (Québec)&nbsp; H1P 3K9", "https://www.axiaservices.com/emballage-1", 'axiaservices.com');
-const templateSnackdepot = createPopupTemplate('div-co-emballage', '4', 'Snackdepot', 'img/logo/123/Snack_depot-removebg-preview.png', '95, Rue des Passerins', "Québec (Québec)&nbsp; G1E 1Z9", "https://www.snackdepot.ca", 'snackdepot.ca');
+const templateSnackdepot = createPopupTemplate('div-co-emballage', '4', 'Snackdepot', 'img/logo/123/Snack_depot-removebg-preview.png', '95, rue des Passerins', "Québec (Québec)&nbsp; G1E 1Z9", "https://www.snackdepot.ca", 'snackdepot.ca');
 
 markerAbeille.bindPopup(templateAbeille);
 markerAxia.bindPopup(templateAxia);
@@ -204,10 +202,10 @@ for (let i = 0; i < btn4.length; i++) {
 
 // Role A
 
+
 let markerItegaA = L.marker([45.578725518839754, -73.54517588465924], { icon: markerA }).addTo(map);
 
-const templateItegaA = createPopupTemplate('Itega', 'Montréal', 'img/logo/ABC/ITEGA_CMYK_M-removebg-preview.png');
-
+const templateItegaA = createPopupTemplate('div-recherche', 'A', 'Itega', 'img/logo/ABC/ITEGA_CMYK_M-removebg-preview.png', '6220, rue Sherbrooke Est', "Montréal (Québec)&nbsp; H1N 1C1", "https://www.itega.ca", 'itega.ca');
 markerItegaA.bindPopup(templateItegaA);
 
 const markersA = [markerItegaA];
@@ -235,11 +233,11 @@ for (let i = 0; i < btnA.length; i++) {
 
 let markerEurofins = L.marker([45.56313548065247, -73.45899298824833], { icon: markerB }).addTo(map);
 let markerRoundup = L.marker([49.285889177594505, -123.11654623049542], { icon: markerB }).addTo(map);
-let markerMicom = L.marker([45.451575269772604, -73.72897711534362], { icon: markerB }).addTo(map);
+let markerMicom = L.marker([45.451472831896254, -73.72893229831246], { icon: markerB }).addTo(map);
 
-const templateEurofins = createPopupTemplate('Eurofins', 'Montréal', 'img/logo/ABC/Eurofins_Logo-removebg-preview.png');
-const templateRoundup = createPopupTemplate('Roundup', 'Montréal', 'img/logo/ABC/AME_Roundup_2023-removebg-preview.png');
-const templateMicom = createPopupTemplate('Micom', 'Montréal', 'img/logo/ABC/Micom-logo-removebg-preview.png');
+const templateEurofins = createPopupTemplate('div-analyse-performance', 'B', 'Eurofins', 'img/logo/ABC/Eurofins_Logo-removebg-preview.png', '2325, Bd Fernand-Lafontaine', "Longueuil (Québec)&nbsp; J4N 1N7", "https://www.labenvironex.com/en/", 'labenvironex.com');
+const templateRoundup = createPopupTemplate('div-analyse-performance', 'B', 'AME Roundup', 'img/logo/ABC/AME_Roundup_2023-removebg-preview.png', '889 W Pender St #800', "Vancouver (Colombie-Britannique)&nbsp; V6C 3B2", "https://roundup.amebc.ca/", 'roundup.amebc.ca');
+const templateMicom = createPopupTemplate('div-analyse-performance', 'B', 'Micom inc', 'img/logo/ABC/Micom-logo-removebg-preview.png', '556 Av. Lépine', "Dorval (Québec)&nbsp; H9P 2V6", "https://www.micomlab.com/fr/", 'micomlab.com');
 
 markerEurofins.bindPopup(templateEurofins);
 markerRoundup.bindPopup(templateRoundup);
@@ -267,12 +265,12 @@ for (let i = 0; i < btnB.length; i++) {
 // Role C
 
 let markerItegaC = L.marker([45.578725518839754, -73.54517588465924], { icon: markerC }).addTo(map);
-let markerInteretec = L.marker([45.6131639803758, -73.51578349825002], { icon: markerC }).addTo(map);
-let markerUq = L.marker([46.81326391387531, -71.2224014], { icon: markerC }).addTo(map);
+let markerInteretec = L.marker([45.612467111952164, -73.51557249069322], { icon: markerC }).addTo(map);
+let markerUq = L.marker([46.813253611872724, -71.22240035206579], { icon: markerC }).addTo(map);
 
-const templateItegaC = createPopupTemplate('Itega', 'Montréal', 'img/logo/ABC/ITEGA_CMYK_M-removebg-preview.png');
-const templateInteretec = createPopupTemplate('Interetec', 'Montréal', 'img/logo/ABC/Intertek-Logo-removebg-preview.png');
-const templateUq = createPopupTemplate('Uq', 'Montréal', 'img/logo/ABC/Universities.png');
+const templateItegaC = createPopupTemplate('div-innocuite', 'C', 'ITEGA', 'img/logo/ABC/ITEGA_CMYK_M-removebg-preview.png', '6220, rue Sherbrooke Est', "Montréal (Québec)&nbsp; H1N 1C1", "https://www.itega.ca", 'itega.ca');
+const templateInteretec = createPopupTemplate('div-innocuite', 'C', 'Intertek', 'img/logo/ABC/Interetec_Logo-removebg-preview.png', '2561 av Georges-V', "Montréal-Est (Québec)&nbsp; H1L 6S4", "https://www.intertek.com/canada/", 'intertek.com');
+const templateUq = createPopupTemplate('div-innocuite', 'C', 'Université du Québec', 'img/logo/ABC/UQAM_Logo-removebg-preview.png', '475 rue du Parvis', "Québec (Québec)&nbsp; G1K 9H7", "https://reseau.uquebec.ca/fr", 'reseau.uquebec.ca');
 
 markerItegaC.bindPopup(templateItegaC);
 markerInteretec.bindPopup(templateInteretec);
