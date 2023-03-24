@@ -25,12 +25,10 @@ divApprov.addEventListener("click", function () {
   divApprov.style.transition = "all 1s ease-in-out";
   titreLegende[0].style.cursor = "none";
 
-
   //remove style height 80% to divDevTech
   divDevTech.style.height = "20%";
   divDevTech.style.transition = "all 1s ease-in-out";
   divDevTech.style.backgroundColor = "#e4a545";
-
 
   approIni.style.display = "none";
   approIni.style.pointerEvents = "none";
@@ -49,7 +47,6 @@ divDevTech.addEventListener("click", function () {
   divDevTech.style.height = "80%";
   divDevTech.style.transition = "all 1s ease-in-out";
   titreLegende[1].style.cursor = "none";
-
 
   //remove style height 80% to divApprov
   divApprov.style.height = "20%";
@@ -176,22 +173,22 @@ function toggleMiniDiv(i) {
       flexLogo[i].display = "none";
       imgDownUp[i].src = "img/icone/up.png";
       if(flexLogo[i].querySelectorAll('div').length <= 3){
-        animateMiniDivHeight(miniDiv[i], height, 500);
+        animateMiniDivHeight(miniDiv[i], height, 200);
       }else{
-        animateMiniDivHeight(miniDiv[i], height + 40, 500);
+        animateMiniDivHeight(miniDiv[i], height + 40, 200);
         flexLogo[i].style.marginTop = "20px";
       }
-      // wait for the animation to finish before displaying the logo
-      setTimeout(function () {
-        flexLogo[i].style.display = "flex";
-      }, 500);
+      flexLogo[i].style.display = "flex";
       // Close the clicked miniDiv element
     } else {
       imgDownUp[i].src = "img/icone/down.png";
       animateMiniDivHeight(miniDiv[i], 84, 500);
       flexLogo[i].style.display = "none";
+      console.log('div '+i+' : ' +flexLogo[i].style.display);
+      
     }
   }
+  // categorie F
   else if (i === 9) {
     for (let k = i; k < flexLogo.length; k++) {
       if(flexLogo[k].querySelectorAll('div').length > 3){
@@ -201,7 +198,7 @@ function toggleMiniDiv(i) {
     }
     if (imgDownUp[i].src.match("down.png")) {
       imgDownUp[i].src = "img/icone/up.png";
-      animateMiniDivHeight(miniDiv[i], height + heightF, 500);
+      animateMiniDivHeight(miniDiv[i], height + heightF, 50);
       // wait for the animation to finish before displaying the logo
       setTimeout(function () {
         for (let k = 9; k < flexLogo.length; k++) {
