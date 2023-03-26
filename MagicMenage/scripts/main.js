@@ -89,8 +89,6 @@ window.onload = function () {
         }
 
         suivant.addEventListener("click", function () {
-            console.log("suivant");
-
             recapitulatif();
 
             form1.style.display = "none";
