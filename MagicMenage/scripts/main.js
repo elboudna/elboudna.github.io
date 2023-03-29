@@ -164,7 +164,6 @@ window.onload = function () {
 
     else if (mainId == "mainAccueil") {
 
-
         let counterAns = document.getElementById('counterAns');
         let counterClient = document.getElementById('counterClient');
         let counterMaison = document.getElementById('counterMaison');
@@ -320,5 +319,6 @@ window.onload = function () {
                 });
             }
         }
+
     }
 }    

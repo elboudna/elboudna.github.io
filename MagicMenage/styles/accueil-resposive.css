@@ -239,8 +239,10 @@
         justify-content: center;
         height: 800px;
         position:sticky;
-        z-index: -100;
+        /* z-index: -1; */
     }
+
+
 
     .hero-description{
         text-align: center;
