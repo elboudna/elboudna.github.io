@@ -1,3 +1,17 @@
+/* only for large screen */
+@media screen and (max-width: 1900px) {
+    #suite-description{
+        display: none;
+    }
+}
+
+/* media for screen smallet than 1200px */
+@media screen and (max-width: 1200px) {
+    .aProposImg{
+        height: 744px;
+    }
+}
+
 /* media for screen smallet than 970px */
 @media screen and (max-width: 960px) {
     .flexCustomer {
@@ -51,10 +65,22 @@
     }
 }
 
+/* media for 768 */
+
+@media screen and (max-width: 1020px) {
+    #suite-description{
+        display: block;
+    }
+}
+
 /* media for screen smallet than 600px */
 @media screen and (max-width: 600px) {
     .customer {
         width: 80%;
+    }
+
+    #suite-description{
+        display: none;
     }
 }
 

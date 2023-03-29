@@ -254,10 +254,11 @@
     padding: 20px;
     border-radius: 9px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 500px;
   }
 
   .customer img{
-    width: 80px;
+    width: 100px;
     border-radius: 50%;
   }
 
@@ -272,6 +273,7 @@
 .customerReview{
   font-size: 1.2em;
   margin-top: 20px;
+  height: 235px;
   text-align: justify;
 }
 
